@@ -390,7 +390,10 @@ const Home = () => {
                     Priority support
                   </li>
                 </ul>
-                <Button className='w-full'>
+                <Button
+                  className='w-full'
+                  onClick={onPricingCardClick}
+                >
                   Contact Us
                 </Button>
               </div>
@@ -424,7 +427,10 @@ const Home = () => {
                     Priority support
                   </li>
                 </ul>
-                <Button className='w-full'>
+                <Button
+                  className='w-full'
+                  onClick={onPricingCardClick}
+                >
                   Contact Us
                 </Button>
               </div>

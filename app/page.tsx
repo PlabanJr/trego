@@ -19,6 +19,10 @@ import {
 } from '@trego/components/ui/icons';
 
 const Home = () => {
+  const onPricingCardClick = () => {
+    window?.open('https://wa.me/+917896959322', '_blank');
+  };
+
   return (
     <div className='flex flex-col min-h-[100dvh]'>
       <header className='px-4 lg:px-6 h-14 flex items-center'>
@@ -351,7 +355,12 @@ const Home = () => {
                     Priority support
                   </li>
                 </ul>
-                <Button className='w-full'>Sign Up</Button>
+                <Button
+                  className='w-full'
+                  onClick={onPricingCardClick}
+                >
+                  Contact Us
+                </Button>
               </div>
               <div className='flex flex-col justify-center space-y-4 rounded-lg border bg-background p-6 shadow-sm'>
                 <div className='space-y-2'>
@@ -381,7 +390,9 @@ const Home = () => {
                     Priority support
                   </li>
                 </ul>
-                <Button className='w-full'>Sign Up</Button>
+                <Button className='w-full'>
+                  Contact Us
+                </Button>
               </div>
               <div className='flex flex-col justify-center space-y-4 rounded-lg border bg-background p-6 shadow-sm'>
                 <div className='space-y-2'>
@@ -413,7 +424,9 @@ const Home = () => {
                     Priority support
                   </li>
                 </ul>
-                <Button className='w-full'>Sign Up</Button>
+                <Button className='w-full'>
+                  Contact Us
+                </Button>
               </div>
             </div>
           </div>

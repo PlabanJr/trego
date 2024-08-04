@@ -1,18 +1,6 @@
+'use client';
+
 /* eslint-disable react/no-unescaped-entities */
-
-import { Gabarito } from 'next/font/google';
-import { Tenor_Sans } from 'next/font/google';
-
-const gabarito = Gabarito({
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const tenorSans = Tenor_Sans({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,7 +23,7 @@ const Home = () => {
     <div className='flex flex-col min-h-[100dvh]'>
       <header className='px-4 lg:px-6 h-14 flex items-center'>
         <Link
-          href='#'
+          href='/'
           className='flex items-center justify-center'
           prefetch={false}
         >
@@ -97,23 +85,22 @@ const Home = () => {
                     Hassle-free Vehicle Service
                   </h1>
                   <p className='max-w-[600px] text-muted-foreground md:text-xl'>
-                    Our platform connects you with
-                    authorized service centers, offering
-                    pick-up and drop-off assistance, and
-                    real-time updates on your vehicle's
-                    status.
+                    We connect you with authorized service
+                    centers, offering pick-up and drop-off
+                    assistance, and real-time updates on
+                    your vehicle's status.
                   </p>
                 </div>
                 <div className='flex flex-col gap-2 min-[400px]:flex-row'>
                   <Link
-                    href='#'
+                    href='#services'
                     className='inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
                     prefetch={false}
                   >
                     Explore Services
                   </Link>
                   <Link
-                    href='#'
+                    href='#pricing'
                     className='inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
                     prefetch={false}
                   >
@@ -121,8 +108,8 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-              <img
-                src='/placeholder.svg'
+              <Image
+                src='/hero.png'
                 width='550'
                 height='550'
                 alt='Hero'
@@ -145,10 +132,10 @@ const Home = () => {
                   Hassle-free Vehicle Servicing
                 </h2>
                 <p className='max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  Our platform connects you with authorized
-                  service centers, offering pick-up and
-                  drop-off assistance, and real-time updates
-                  on your vehicle's status.
+                  We connect you with authorized service
+                  centers, offering pick-up and drop-off
+                  assistance, and real-time updates on your
+                  vehicle's status.
                 </p>
               </div>
             </div>
@@ -195,8 +182,8 @@ const Home = () => {
                   </li>
                 </ul>
               </div>
-              <img
-                src='/placeholder.svg'
+              <Image
+                src='/bike.png'
                 width='550'
                 height='310'
                 alt='Services'
@@ -313,35 +300,6 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className='flex flex-col justify-center space-y-4'>
-                <div className='grid gap-1'>
-                  <div className='flex items-center gap-2'>
-                    <LocateIcon className='h-5 w-5 text-primary' />
-                    <h3 className='text-xl font-bold'>
-                      Mumbai
-                    </h3>
-                  </div>
-                  <p className='text-muted-foreground'>
-                    Our platform is available in Mumbai,
-                    providing hassle-free vehicle servicing.
-                  </p>
-                </div>
-              </div>
-              <div className='flex flex-col justify-center space-y-4'>
-                <div className='grid gap-1'>
-                  <div className='flex items-center gap-2'>
-                    <LocateIcon className='h-5 w-5 text-primary' />
-                    <h3 className='text-xl font-bold'>
-                      Delhi
-                    </h3>
-                  </div>
-                  <p className='text-muted-foreground'>
-                    Our platform is available in Delhi,
-                    making vehicle servicing easy and
-                    convenient.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -370,9 +328,9 @@ const Home = () => {
                   <h3 className='text-2xl font-bold'>
                     Freemium
                   </h3>
-                  <p className='text-4xl font-bold'>$0</p>
+                  <p className='text-4xl font-bold'>₹0</p>
                   <p className='text-muted-foreground'>
-                    per month
+                    per year
                   </p>
                 </div>
                 <ul className='space-y-2 text-muted-foreground'>
@@ -400,9 +358,9 @@ const Home = () => {
                   <h3 className='text-2xl font-bold'>
                     Premium
                   </h3>
-                  <p className='text-4xl font-bold'>$19</p>
+                  <p className='text-4xl font-bold'>₹499</p>
                   <p className='text-muted-foreground'>
-                    per month
+                    per year
                   </p>
                 </div>
                 <ul className='space-y-2 text-muted-foreground'>
@@ -430,9 +388,11 @@ const Home = () => {
                   <h3 className='text-2xl font-bold'>
                     Elite
                   </h3>
-                  <p className='text-4xl font-bold'>$49</p>
+                  <p className='text-4xl font-bold'>
+                    ₹1149
+                  </p>
                   <p className='text-muted-foreground'>
-                    per month
+                    per year
                   </p>
                 </div>
                 <ul className='space-y-2 text-muted-foreground'>
@@ -465,9 +425,6 @@ const Home = () => {
           <div className='container px-4 md:px-6'>
             <div className='flex flex-col items-center justify-center space-y-4 text-center'>
               <div className='space-y-2'>
-                <div className='inline-block rounded-lg bg-muted px-3 py-1 text-sm'>
-                  Contact Us
-                </div>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
                   Get in Touch
                 </h2>
@@ -478,23 +435,52 @@ const Home = () => {
                 </p>
               </div>
               <div className='mx-auto w-full max-w-sm space-y-2'>
-                <form className='flex flex-col gap-2'>
+                <form
+                  method='POST'
+                  className='flex flex-col gap-2'
+                  action='https://api.sheetmonkey.io/form/cfnh7TTkerGoSvsge34Ff'
+                >
+                  <input
+                    type='hidden'
+                    name='DateTime'
+                    value={(() => {
+                      const date = new Date();
+                      const options = {
+                        day: '2-digit' as const,
+                        month: '2-digit' as const,
+                        year: 'numeric' as const,
+                        hour: '2-digit' as const,
+                        minute: '2-digit' as const,
+                        hour12: true,
+                      };
+                      return date.toLocaleDateString(
+                        'en-GB',
+                        options
+                      );
+                    })()}
+                  />
+
                   <Input
                     type='text'
                     placeholder='Name'
                     className='max-w-lg flex-1'
+                    name='Name'
+                    required
+                    minLength={2}
+                    maxLength={15}
+                    title='Name must be 2-15 letters long'
                   />
                   <Input
-                    type='email'
-                    placeholder='Email'
+                    type='tel'
+                    placeholder='Contact number'
                     className='max-w-lg flex-1'
+                    name='Phone'
+                    required
+                    pattern='^[6-9]\d{9}$'
+                    title='Please enter a valid phone number'
                   />
-                  <Textarea
-                    placeholder='Message'
-                    className='max-w-lg flex-1'
-                    rows={4}
-                  />
-                  <Button type='submit'>Submit</Button>
+
+                  <Button type='submit'>Next</Button>
                 </form>
               </div>
             </div>

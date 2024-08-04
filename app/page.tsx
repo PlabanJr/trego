@@ -462,21 +462,7 @@ const Home = () => {
                   <input
                     type='hidden'
                     name='DateTime'
-                    value={(() => {
-                      const date = new Date();
-                      const options = {
-                        day: '2-digit' as const,
-                        month: '2-digit' as const,
-                        year: 'numeric' as const,
-                        hour: '2-digit' as const,
-                        minute: '2-digit' as const,
-                        hour12: true,
-                      };
-                      return date.toLocaleDateString(
-                        'en-GB',
-                        options
-                      );
-                    })()}
+                    value='x-sheetmonkey-current-date-time'
                   />
 
                   <Input

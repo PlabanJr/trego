@@ -1,60 +1,78 @@
-import React from 'react'
+import React from 'react';
 
-import Script from 'dangerous-html/react'
-import PropTypes from 'prop-types'
+import Script from 'dangerous-html/react';
+import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
   return (
     <>
-      <header className={`navbar-navbar ${props.rootClassName} `}>
+      <header
+        className={`navbar-navbar ${props.rootClassName} `}
+      >
         <img
-          alt="Planical7012"
+          alt='Trego'
           src={props.brandingLogo}
-          className="navbar-branding-logo"
+          className='navbar-branding-logo'
         />
-        <div className="navbar-nav-content">
-          <div className="navbar-nav-links">
-            <span className="navbar-link nav-link">Features</span>
-            <span className="nav-link">Why us</span>
-            <span className="nav-link">Prices</span>
-            <span className="nav-link">Contact</span>
+        <div className='navbar-nav-content'>
+          <div className='navbar-nav-links'>
+            <span className='navbar-link nav-link'>
+              Features
+            </span>
+            <span className='nav-link'>Why us</span>
+            <span className='nav-link'>Prices</span>
+            <span className='nav-link'>Contact</span>
           </div>
-          <div className="get-started navbar-get-started">
-            <span className="navbar-text">Get started</span>
+          <div className='get-started navbar-get-started'>
+            <span className='navbar-text'>Get started</span>
           </div>
-          <div id="open-mobile-menu" className="navbar-hamburger get-started">
+          <div
+            id='open-mobile-menu'
+            className='navbar-hamburger get-started'
+          >
             <img
               alt={props.imageAlt}
               src={props.imageSrc}
-              className="navbar-image"
+              className='navbar-image'
             />
           </div>
         </div>
-        <div id="mobile-menu" className="navbar-mobile-menu">
-          <div className="navbar-branding">
+        <div
+          id='mobile-menu'
+          className='navbar-mobile-menu'
+        >
+          <div className='navbar-branding'>
             <img
               alt={props.imageAlt1}
               src={props.imageSrc1}
-              className="navbar-image1"
+              className='navbar-image1'
             />
-            <div id="close-mobile-menu" className="navbar-container">
-              <svg viewBox="0 0 1024 1024" className="navbar-icon">
-                <path d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
+            <div
+              id='close-mobile-menu'
+              className='navbar-container'
+            >
+              <svg
+                viewBox='0 0 1024 1024'
+                className='navbar-icon'
+              >
+                <path d='M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z'></path>
               </svg>
             </div>
           </div>
-          <div className="navbar-nav-links1">
-            <span className="nav-link">Features</span>
-            <span className="nav-link">Why us</span>
-            <span className="nav-link">Prices</span>
-            <span className="nav-link">Contact</span>
+          <div className='navbar-nav-links1'>
+            <span className='nav-link'>Features</span>
+            <span className='nav-link'>Why us</span>
+            <span className='nav-link'>Prices</span>
+            <span className='nav-link'>Contact</span>
           </div>
-          <div className="get-started">
-            <span className="navbar-text1">Get started</span>
+          <div className='get-started'>
+            <span className='navbar-text1'>
+              Get started
+            </span>
           </div>
         </div>
         <div>
-          <div className="navbar-container2">
+          <div className='navbar-container2'>
             <Script
               html={`<script defer>
     /*
@@ -116,12 +134,15 @@ listenForUrlChangesMobileMenu()
             align-items: center;
             flex-shrink: 1;
             padding-top: var(--dl-space-space-twounits);
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(0);
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             padding-bottom: var(--dl-space-space-fiveunits);
           }
           .navbar-branding-logo {
             box-sizing: content-box;
+            height: 50px;
           }
           .navbar-nav-content {
             gap: var(--dl-space-space-threeunits);
@@ -216,10 +237,15 @@ listenForUrlChangesMobileMenu()
 
           @media (max-width: 767px) {
             .navbar-navbar {
-              padding-bottom: var(--dl-space-space-fourunits);
+              padding-left: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-bottom: var(
+                --dl-space-space-fourunits
+              );
             }
             .navbar-branding-logo {
-              width: 80px;
+              height: 40px;
             }
             .navbar-nav-links {
               display: none;
@@ -249,17 +275,17 @@ listenForUrlChangesMobileMenu()
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Navbar.defaultProps = {
   imageAlt: 'image',
-  imageSrc1: '/Branding/planical7012-ttpb.svg',
+  imageSrc1: '/Branding/logo-white-final.png',
   imageSrc: '/Icons/hamburger-200h.png',
   imageAlt1: 'image',
   rootClassName: '',
-  brandingLogo: '/Branding/planical7012-wzf.svg',
-}
+  brandingLogo: '/Branding/logo-white-final.png',
+};
 
 Navbar.propTypes = {
   imageAlt: PropTypes.string,
@@ -268,6 +294,6 @@ Navbar.propTypes = {
   imageAlt1: PropTypes.string,
   rootClassName: PropTypes.string,
   brandingLogo: PropTypes.string,
-}
+};
 
-export default Navbar
+export default Navbar;

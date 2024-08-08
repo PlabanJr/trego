@@ -1,438 +1,664 @@
-import React from 'react'
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
 
-import Script from 'dangerous-html/react'
+import Script from 'dangerous-html/react';
 
-import Navbar from '../components/navbar'
-import Mark from '../components/mark'
-import Card from '../components/card'
-import Accordion from '../components/accordion'
-import Includes from '../components/includes'
-import Excludes from '../components/excludes'
-import Review from '../components/review'
-import Article from '../components/article'
-import FAQ from '../components/faq'
+import Navbar from '../components/navbar';
+import Mark from '../components/mark';
+import Card from '../components/card';
+import Accordion from '../components/accordion';
+import Includes from '../components/includes';
+import Excludes from '../components/excludes';
+import Review from '../components/review';
+import Article from '../components/article';
+import FAQ from '../components/faq';
 
 const Home = (props) => {
+  const [currentTab, setCurrentTab] = React.useState(0);
+
+  const onTabClick = (tabIndex) => {
+    setCurrentTab(tabIndex);
+  };
+
   return (
     <>
-      <div className="home-container">
+      <div className='home-container'>
         <Head>
-          <title>Planical modern template</title>
-          <meta property="og:title" content="Planical modern template" />
+          <title>Trego</title>
+          <meta property='og:title' content='Trego' />
         </Head>
-        <Navbar rootClassName="navbar-root-class-name"></Navbar>
-        <section className="home-section">
-          <div className="home-hero">
-            <div className="home-content">
-              <main className="home-main">
-                <header className="home-header">
-                  <h1 className="home-heading">
-                    The fastest way to make a doctor appointment
+        <Navbar rootClassName='navbar-root-class-name'></Navbar>
+        <section className='home-section'>
+          <div className='home-hero'>
+            <div className='home-content'>
+              <main className='home-main'>
+                <header className='home-header'>
+                  <h1 className='home-heading'>
+                    Book Trusted Car & Bike Servicing with
+                    Ease
                   </h1>
-                  <span className="home-caption">
-                    Be Relax! We are here to provide hassle-free vehicle service
-                    while you work in the office.
+                  <span className='home-caption'>
+                    Relax at work—we’ll handle your car or
+                    bike service with authorized dealers,
+                    hassle-free.
                   </span>
                 </header>
-                <div className="home-buttons">
-                  <div className="home-get-started button">
-                    <span className="home-text">Book appointment</span>
+                <div className='home-buttons'>
+                  <div className='home-get-started button'>
+                    <span className='home-text'>
+                      Book Service Now
+                    </span>
                   </div>
-                  <div className="home-get-started1 button">
-                    <span className="home-text01">View features</span>
+                  <div className='home-get-started1 button'>
+                    <span className='home-text01'>
+                      Explore Services
+                    </span>
                   </div>
                 </div>
               </main>
-              <div className="home-highlight">
-                <div className="home-avatars">
+              <div className='home-highlight'>
+                <div className='home-avatars'>
                   <img
-                    alt="image"
-                    src="https://images.unsplash.com/photo-1552234994-66ba234fd567?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDN8fHBvdHJhaXR8ZW58MHx8fHwxNjY3MjQ0ODcx&amp;ixlib=rb-4.0.3&amp;w=200"
-                    className="home-image avatar"
+                    alt='image'
+                    src='https://images.unsplash.com/photo-1552234994-66ba234fd567?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDN8fHBvdHJhaXR8ZW58MHx8fHwxNjY3MjQ0ODcx&amp;ixlib=rb-4.0.3&amp;w=200'
+                    className='home-image avatar'
                   />
                   <img
-                    alt="image"
-                    src="https://images.unsplash.com/photo-1610276198568-eb6d0ff53e48?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHBvdHJhaXR8ZW58MHx8fHwxNjY3MjQ0ODcx&amp;ixlib=rb-4.0.3&amp;w=200"
-                    className="home-image01 avatar"
+                    alt='image'
+                    src='https://images.unsplash.com/photo-1610276198568-eb6d0ff53e48?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHBvdHJhaXR8ZW58MHx8fHwxNjY3MjQ0ODcx&amp;ixlib=rb-4.0.3&amp;w=200'
+                    className='home-image01 avatar'
                   />
                   <img
-                    alt="image"
-                    src="https://images.unsplash.com/photo-1618151313441-bc79b11e5090?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEzfHxwb3RyYWl0fGVufDB8fHx8MTY2NzI0NDg3MQ&amp;ixlib=rb-4.0.3&amp;w=200"
-                    className="home-image02 avatar"
+                    alt='image'
+                    src='https://images.unsplash.com/photo-1618151313441-bc79b11e5090?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEzfHxwb3RyYWl0fGVufDB8fHx8MTY2NzI0NDg3MQ&amp;ixlib=rb-4.0.3&amp;w=200'
+                    className='home-image02 avatar'
                   />
                 </div>
-                <label className="home-caption1">
-                  Loved by 10,000+ people like you.
+                <label className='home-caption1'>
+                  Loved by 100+ people like you.
                 </label>
               </div>
             </div>
-            <div className="home-image03">
+            <div className='home-image03'>
               <img
-                alt="image"
-                src="/SectionImages/heroimage-1500h.png"
-                className="home-image04"
+                alt='image'
+                src='/SectionImages/heroimage-1500h.png'
+                className='home-image04'
               />
             </div>
-            <div className="home-image05">
+            <div className='home-image05'>
               <img
-                alt="image"
-                src="/SectionImages/heroimage-1500h.png"
-                className="home-image06"
+                alt='image'
+                src='/SectionImages/heroimage-1500h.png'
+                className='home-image06'
               />
             </div>
           </div>
         </section>
-        <section className="home-section01">
-          <h2 className="home-text02">
-            Our doctors and therapists are here, 24/7.
+        <section className='home-section01'>
+          <h2 className='home-text02'>
+            Trego Has You Covered, Anytime
           </h2>
-          <div className="home-features">
-            <header className="feature feature-active home-feature">
-              <h3 className="home-text03">Urgent Care</h3>
-              <p className="home-text04">Doloremque laudantium</p>
+          <div className='home-features'>
+            <header
+              className={`feature  home-feature ${
+                currentTab === 0 ? 'feature-active' : ''
+              }`}
+              onClick={() => onTabClick(0)}
+            >
+              <h3 className='home-text03'>
+                Pick & Drop Assist
+              </h3>
+              <p className='home-text04'>
+                Hassle-Free Pick & Drop Service
+              </p>
             </header>
-            <header className="feature home-feature1">
-              <h3 className="home-text05">Chronic Care</h3>
-              <p className="home-text06">Doloremque laudantium</p>
+            <header
+              className={`feature home-feature1 ${
+                currentTab === 1 ? 'feature-active' : ''
+              }`}
+              onClick={() => onTabClick(1)}
+            >
+              <h3 className='home-text05'>
+                Live Service Updates
+              </h3>
+              <p className='home-text06'>
+                Stay Informed with Realtime Updates
+              </p>
             </header>
-            <header className="feature home-feature2">
-              <h3 className="home-text07">Mental Health</h3>
-              <p className="home-text08">Doloremque laudantium</p>
+            <header
+              className={`feature home-feature2 ${
+                currentTab === 2 ? 'feature-active' : ''
+              }`}
+              onClick={() => onTabClick(2)}
+            >
+              <h3 className='home-text07'>
+                Upfront Cost Estimation
+              </h3>
+              <p className='home-text08'>
+                Know Your Costs Before You Commit
+              </p>
             </header>
           </div>
-          <div className="home-note">
-            <div className="home-content1">
-              <main className="home-main1">
-                <h2 className="home-heading01">
-                  Accessing this Medicare benefit is easy
-                </h2>
-                <p className="home-paragraph">
-                  <span>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae.
-                  </span>
-                  <br></br>
-                  <br></br>
-                  <span>
-                    Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                    illo inventore veritatis et quasi architecto beatae.
-                  </span>
-                  <br></br>
-                </p>
-              </main>
-              <div className="home-explore-more">
-                <p className="home-text14">Explore more -&gt;</p>
+          {currentTab === 0 ? (
+            <div className='home-note'>
+              <div className='home-content1'>
+                <main className='home-main1'>
+                  <h2 className='home-heading01'>
+                    Convenient, and Reliable Pick & Drop
+                    Service
+                  </h2>
+                  <p className='home-paragraph'>
+                    <span>
+                      Enjoy the convenience of our
+                      effortless pick and drop service. We
+                      manage all the logistics, from
+                      scheduling to transport, so you can
+                      focus on your day. Our seamless
+                      process ensures your vehicle is in
+                      good hands and keeps you informed
+                      throughout.
+                    </span>
+                    <br></br>
+                    <br></br>
+                    <span>
+                      Trust us to pick up and return your
+                      vehicle efficiently, allowing you to
+                      stay focused on what matters most.
+                    </span>
+                    <br></br>
+                  </p>
+                </main>
+                {/* <div className='home-explore-more'>
+                  <p className='home-text14'>
+                    Explore more -&gt;
+                  </p>
+                </div> */}
+              </div>
+              <div className='home-image07'>
+                <img
+                  alt='image'
+                  src='/SectionImages/group%201490-1200w.png'
+                  className='home-image08'
+                />
               </div>
             </div>
-            <div className="home-image07">
-              <img
-                alt="image"
-                src="/SectionImages/group%201490-1200w.png"
-                className="home-image08"
-              />
+          ) : null}
+          {currentTab === 1 ? (
+            <div className='home-note'>
+              <div className='home-content1'>
+                <main className='home-main1'>
+                  <h2 className='home-heading01'>
+                    Stay informed with Real-time Service
+                    Updates (Coming Soon)
+                  </h2>
+                  <p className='home-paragraph'>
+                    <span>
+                      Get ready for real-time service
+                      updates with our upcoming feature.
+                      We’ll soon offer continuous progress
+                      reports, so you’ll always be informed
+                      about your vehicle’s status. From
+                      start to finish, our transparent
+                      updates will keep you connected and in
+                      control.
+                    </span>
+                    <br></br>
+                    <br></br>
+                    <span>
+                      Stay tuned for instant updates that
+                      will make managing your service
+                      experience even more convenient and
+                      hassle-free.
+                    </span>
+                    <br></br>
+                  </p>
+                </main>
+                {/* <div className='home-explore-more'>
+                  <p className='home-text14'>
+                    Explore more -&gt;
+                  </p>
+                </div> */}
+              </div>
+              <div className='home-image07'>
+                <img
+                  alt='image'
+                  src='/SectionImages/group%201490-1200w.png'
+                  className='home-image08'
+                />
+              </div>
             </div>
-          </div>
+          ) : null}
+          {currentTab === 2 ? (
+            <div className='home-note'>
+              <div className='home-content1'>
+                <main className='home-main1'>
+                  <h2 className='home-heading01'>
+                    Transparent Upfront Cost Estimation
+                    (Coming Soon)
+                  </h2>
+                  <p className='home-paragraph'>
+                    <span>
+                      Soon, you'll be able to access clear
+                      and upfront cost estimates for all
+                      your vehicle services. Our upcoming
+                      feature will provide precise pricing
+                      details before you commit, ensuring
+                      you know exactly what to expect. With
+                      transparent cost information at your
+                      fingertips, you can plan and budget
+                      with confidence.
+                    </span>
+                    <br></br>
+                    <br></br>
+                    <span>
+                      Stay tuned for a more informed and
+                      hassle-free service experience.
+                    </span>
+                    <br></br>
+                  </p>
+                </main>
+                {/* <div className='home-explore-more'>
+                  <p className='home-text14'>
+                    Explore more -&gt;
+                  </p>
+                </div> */}
+              </div>
+              <div className='home-image07'>
+                <img
+                  alt='image'
+                  src='/SectionImages/group%201490-1200w.png'
+                  className='home-image08'
+                />
+              </div>
+            </div>
+          ) : null}
         </section>
-        <section className="home-section02">
-          <header className="home-header01">
-            <h2 className="home-text15">
-              Why do you need a mobile medical app?
+        <section className='home-section02'>
+          <header className='home-header01'>
+            <h2 className='home-text15'>
+              How do we Simplify your vehicle servicing?
             </h2>
-            <span className="home-text16">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+            <span className='home-text16'>
+              Our platform makes vehicle servicing easy and
+              convenient. <br />
+              Here's how it works
             </span>
           </header>
-          <section className="home-note1">
-            <div className="home-image09">
+          <section className='home-note1'>
+            <div className='home-image09'>
               <img
-                alt="image"
-                src="/SectionImages/group%201428-1200w.png"
-                className="home-image10"
+                alt='image'
+                src='/SectionImages/group%201428-1200w.png'
+                className='home-image10'
               />
             </div>
-            <div className="home-content2">
-              <div className="home-main2">
-                <div className="home-caption2">
-                  <span className="section-head">Tempor incididunt</span>
+            <div className='home-content2'>
+              <div className='home-main2'>
+                <div className='home-caption2'>
+                  <span className='section-head'>
+                    Book a slot
+                  </span>
                 </div>
-                <div className="home-heading02">
-                  <h2 className="section-heading">
-                    We provide compassionate care from start to finish.
+                <div className='home-heading02'>
+                  <h2 className='section-heading'>
+                    Book your vehicle service easily through
+                    our platform.
                   </h2>
-                  <p className="section-description">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae.
+                  <p className='section-description'>
+                    Our intuitive system simplifies
+                    scheduling, so you can easily arrange
+                    your service without any hassle. Enjoy a
+                    streamlined process that puts you in
+                    control, making vehicle maintenance
+                    straightforward and stress-free.
                   </p>
                 </div>
               </div>
-              <div className="home-get-started2 button">
-                <span className="home-text17">Get started</span>
+              <div className='home-get-started2 button'>
+                <span className='home-text17'>
+                  Book a slot
+                </span>
               </div>
             </div>
           </section>
-          <section className="home-note2">
-            <div className="home-image11">
+          <section className='home-note2'>
+            <div className='home-image11'>
               <img
-                alt="image"
-                src="/SectionImages/group%201449-1200w.png"
-                className="home-image12"
+                alt='image'
+                src='/SectionImages/group%201449-1200w.png'
+                className='home-image12'
               />
             </div>
-            <div className="home-content3">
-              <main className="home-main3">
-                <header className="home-caption3">
-                  <span className="home-section04 section-head">
-                    Tempor incididunt
+            <div className='home-content3'>
+              <main className='home-main3'>
+                <header className='home-caption3'>
+                  <span className='home-section04 section-head'>
+                    Pick-Up Service
                   </span>
                 </header>
-                <main className="home-heading04">
-                  <header className="home-header02">
-                    <h2 className="section-heading">
-                      Great care, wherever you are
+                <main className='home-heading04'>
+                  <header className='home-header02'>
+                    <h2 className='section-heading'>
+                      Pick-Up Service, Wherever You Are
                     </h2>
-                    <p className="section-description">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium.
+                    <p className='section-description'>
+                      We’ll handle the pick-up of your
+                      vehicle, ensuring it arrives at the
+                      service center safely and on time.
                     </p>
                   </header>
-                  <div className="home-checkmarks">
-                    <Mark></Mark>
-                    <Mark label="Quis nostrud exercitation ullamco"></Mark>
-                    <Mark label="Reprehenderit qui in ea voluptate velit"></Mark>
+                  <div className='home-checkmarks'>
+                    <Mark label='We come to you for a hassle-free vehicle pick-up'></Mark>
+                    <Mark label='Your vehicle is handled with the utmost care during collection'></Mark>
+                    <Mark label='Pick a time that suits your schedule for an easy experience'></Mark>
                   </div>
                 </main>
               </main>
-              <div className="home-get-started3 button">
-                <span className="home-text18">Get started</span>
+              {/* <div className='home-get-started3 button'>
+                <span className='home-text18'>
+                  Schedule pickup
+                </span>
+              </div> */}
+            </div>
+          </section>
+          <section className='home-note1'>
+            <div className='home-image09'>
+              <img
+                alt='image'
+                src='/SectionImages/group%201428-1200w.png'
+                className='home-image10'
+              />
+            </div>
+            <div className='home-content2'>
+              <div className='home-main2'>
+                <div className='home-caption2'>
+                  <span className='section-head'>
+                    Drop-Off Service
+                  </span>
+                </div>
+                <div className='home-heading02'>
+                  <h2 className='section-heading'>
+                    Seamless Drop-Off Service, Right to Your
+                    Doorstep
+                  </h2>
+                  <p className='section-description'>
+                    After the service is complete, we’ll
+                    return your vehicle to you, making sure
+                    it's conveniently delivered back to your
+                    location.
+                  </p>
+                </div>
+                <div className='home-checkmarks'>
+                  <Mark label='We bring your vehicle back to you for added convenience'></Mark>
+                  <Mark label='Your vehicle is handled with care throughout the return'></Mark>
+                  <Mark label='Select a delivery time that works for you for a seamless experience'></Mark>
+                </div>
               </div>
+              {/* <div className='home-get-started2 button'>
+                <span className='home-text17'>
+                  Book a slot
+                </span>
+              </div> */}
             </div>
           </section>
         </section>
-        <section className="home-section05">
-          <header className="home-header03">
-            <header className="home-left">
-              <span className="section-head">Tempor incididunt</span>
-              <h2 className="section-heading">
-                <span>Meet our network</span>
-                <br></br>
-                <span>of licensed providers</span>
+        <section className='home-section05'>
+          <header className='home-header03'>
+            <header className='home-left'>
+              <span className='section-head'>
+                Our partners brands
+              </span>
+              <h2 className='section-heading'>
+                <span>Discover our Service Centers</span>
+                {/* <br></br>
+                <span></span> */}
               </h2>
             </header>
-            <div className="home-right">
-              <p className="home-paragraph3 section-description">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+            {/* <div className='home-right'>
+              <p className='home-paragraph3 section-description'>
+                Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremque
+                laudantium, totam rem aperiam.
               </p>
-            </div>
+            </div> */}
           </header>
-          <main className="home-cards">
-            <Card rootClassName="card-root-class-name"></Card>
+          <main className='home-cards'>
+            <Card rootClassName='card-root-class-name'></Card>
             <Card
-              icon="/Icons/group%201314-200h.png"
-              rootClassName="card-root-class-name1"
+              icon='/Icons/group%201314-200h.png'
+              rootClassName='card-root-class-name1'
             ></Card>
             <Card
-              icon="/Icons/group%201317-200h.png"
-              rootClassName="card-root-class-name2"
+              icon='/Icons/group%201317-200h.png'
+              rootClassName='card-root-class-name2'
             ></Card>
           </main>
         </section>
-        <section className="home-section07">
-          <div className="home-note3">
-            <div className="home-image13">
+        {/* <section className='home-section07'>
+          <div className='home-note3'>
+            <div className='home-image13'>
               <img
-                alt="image"
-                src="/SectionImages/iphone%2014%20pro%20max-1200w.png"
-                className="home-image14"
+                alt='image'
+                src='/SectionImages/iphone%2014%20pro%20max-1200w.png'
+                className='home-image14'
               />
             </div>
-            <div className="home-content4">
-              <div className="home-caption4">
-                <span className="section-head">Tempor incididunt</span>
+            <div className='home-content4'>
+              <div className='home-caption4'>
+                <span className='section-head'>
+                  Tempor incididunt
+                </span>
               </div>
-              <div className="home-heading07">
-                <div className="home-header04">
-                  <h2 className="section-heading">
-                    Tips to get care, answers and advice faster
+              <div className='home-heading07'>
+                <div className='home-header04'>
+                  <h2 className='section-heading'>
+                    Tips to get care, answers and advice
+                    faster
                   </h2>
                 </div>
-                <Accordion rootClassName="accordion-root-class-name"></Accordion>
+                <Accordion rootClassName='accordion-root-class-name'></Accordion>
               </div>
             </div>
           </div>
-        </section>
-        <section className="home-section09">
-          <div className="home-cube">
-            <div className="home-top side"></div>
-            <div className="home-front side"></div>
-            <div className="home-left1 side"></div>
+        </section> */}
+        {/* <section className='home-section09'>
+          <div className='home-cube'>
+            <div className='home-top side'></div>
+            <div className='home-front side'></div>
+            <div className='home-left1 side'></div>
           </div>
-          <main className="home-banner">
-            <div className="home-header05">
-              <h2 className="section-heading">
+          <main className='home-banner'>
+            <div className='home-header05'>
+              <h2 className='section-heading'>
                 Planical makes online doctor visits easier
               </h2>
-              <p className="home-description section-description">
+              <p className='home-description section-description'>
                 Lorem ipsum dolor sit amet!
               </p>
             </div>
-            <div className="home-buttons1">
-              <div className="home-get-started4 button">
-                <span className="home-text22">Get started</span>
+            <div className='home-buttons1'>
+              <div className='home-get-started4 button'>
+                <span className='home-text22'>
+                  Get started
+                </span>
               </div>
-              <div className="home-book-demo button">
-                <span className="home-text23">Book a demo</span>
+              <div className='home-book-demo button'>
+                <span className='home-text23'>
+                  Book a demo
+                </span>
               </div>
             </div>
           </main>
-        </section>
-        <section className="home-section10">
-          <div className="home-cube1">
-            <div className="home-top1 side"></div>
-            <div className="home-front1 side"></div>
-            <div className="home-left2 side"></div>
+        </section> */}
+        {/* <section className='home-section10'>
+          <div className='home-cube1'>
+            <div className='home-top1 side'></div>
+            <div className='home-front1 side'></div>
+            <div className='home-left2 side'></div>
           </div>
-          <main className="home-pricing">
-            <header className="home-header06">
-              <header className="home-left3">
-                <span className="section-head">Pricing</span>
-                <h2 className="section-heading home-heading10">
+          <main className='home-pricing'>
+            <header className='home-header06'>
+              <header className='home-left3'>
+                <span className='section-head'>
+                  Pricing
+                </span>
+                <h2 className='section-heading home-heading10'>
                   Start small, think big
                 </h2>
               </header>
-              <div className="home-right1">
-                <p className="home-paragraph4 section-description">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam.
+              <div className='home-right1'>
+                <p className='home-paragraph4 section-description'>
+                  Sed ut perspiciatis unde omnis iste natus
+                  error sit voluptatem accusantium
+                  doloremque laudantium, totam rem aperiam.
                 </p>
               </div>
             </header>
-            <div className="home-plans-container">
-              <div className="home-switch">
-                <div className="switch">
-                  <label className="home-text24">Monthly</label>
+            <div className='home-plans-container'>
+              <div className='home-switch'>
+                <div className='switch'>
+                  <label className='home-text24'>
+                    Monthly
+                  </label>
                 </div>
-                <div className="home-switch2 switch">
-                  <label className="home-text25">Yearly</label>
+                <div className='home-switch2 switch'>
+                  <label className='home-text25'>
+                    Yearly
+                  </label>
                 </div>
               </div>
-              <main className="home-plans">
-                <div className="home-plan">
-                  <div className="home-details">
-                    <div className="home-header07">
-                      <label className="home-name">Basic</label>
-                      <div className="home-pricing1">
-                        <h1 className="home-price">$9</h1>
-                        <span className="home-duration">/mo</span>
+              <main className='home-plans'>
+                <div className='home-plan'>
+                  <div className='home-details'>
+                    <div className='home-header07'>
+                      <label className='home-name'>
+                        Basic
+                      </label>
+                      <div className='home-pricing1'>
+                        <h1 className='home-price'>$9</h1>
+                        <span className='home-duration'>
+                          /mo
+                        </span>
                       </div>
                     </div>
-                    <p className="home-description1">
-                      Good for sed quia consequuntur magni dolores eos qui
-                      ratione.
+                    <p className='home-description1'>
+                      Good for sed quia consequuntur magni
+                      dolores eos qui ratione.
                     </p>
                   </div>
-                  <div className="home-buy-details">
-                    <div className="home-buy button">
-                      <span className="home-text26">
+                  <div className='home-buy-details'>
+                    <div className='home-buy button'>
+                      <span className='home-text26'>
                         <span>Start Basic</span>
                         <br></br>
                       </span>
                     </div>
-                    <div className="home-features1">
-                      <span className="home-heading11">You will get</span>
-                      <div className="home-list">
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
+                    <div className='home-features1'>
+                      <span className='home-heading11'>
+                        You will get
+                      </span>
+                      <div className='home-list'>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="home-plan1">
-                  <div className="home-details1">
-                    <div className="home-header08">
-                      <label className="home-name1">Professional</label>
-                      <div className="home-pricing2">
-                        <h1 className="home-price1">$15</h1>
-                        <span className="home-duration1">/mo</span>
+                <div className='home-plan1'>
+                  <div className='home-details1'>
+                    <div className='home-header08'>
+                      <label className='home-name1'>
+                        Professional
+                      </label>
+                      <div className='home-pricing2'>
+                        <h1 className='home-price1'>$15</h1>
+                        <span className='home-duration1'>
+                          /mo
+                        </span>
                       </div>
                     </div>
-                    <p className="home-description2">
-                      Good for sed quia consequuntur magni dolores eos qui
-                      ratione.
+                    <p className='home-description2'>
+                      Good for sed quia consequuntur magni
+                      dolores eos qui ratione.
                     </p>
                   </div>
-                  <div className="home-buy-details1">
-                    <div className="home-buy1 button">
-                      <span className="home-text29">
+                  <div className='home-buy-details1'>
+                    <div className='home-buy1 button'>
+                      <span className='home-text29'>
                         <span>Start Professional</span>
                         <br></br>
                       </span>
                     </div>
-                    <div className="home-features2">
-                      <span className="home-heading12">You will get</span>
-                      <div className="home-list1">
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
-                        <Excludes rootClassName="excludes-root-class-name"></Excludes>
+                    <div className='home-features2'>
+                      <span className='home-heading12'>
+                        You will get
+                      </span>
+                      <div className='home-list1'>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
+                        <Excludes rootClassName='excludes-root-class-name'></Excludes>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="home-plan2">
-                  <div className="home-details2">
-                    <div className="home-header09">
-                      <label className="home-name2">Enterprise</label>
-                      <div className="home-pricing3">
-                        <span className="home-price2">$99</span>
-                        <span className="home-duration2">/mo</span>
+                <div className='home-plan2'>
+                  <div className='home-details2'>
+                    <div className='home-header09'>
+                      <label className='home-name2'>
+                        Enterprise
+                      </label>
+                      <div className='home-pricing3'>
+                        <span className='home-price2'>
+                          $99
+                        </span>
+                        <span className='home-duration2'>
+                          /mo
+                        </span>
                       </div>
                     </div>
-                    <p className="home-description3">
-                      Good for sed quia consequuntur magni dolores eos qui
-                      ratione.
+                    <p className='home-description3'>
+                      Good for sed quia consequuntur magni
+                      dolores eos qui ratione.
                     </p>
                   </div>
-                  <div className="home-buy-details2">
-                    <div className="home-buy2 button">
-                      <span className="home-text32">
+                  <div className='home-buy-details2'>
+                    <div className='home-buy2 button'>
+                      <span className='home-text32'>
                         <span>Start Enterprise</span>
                         <br></br>
                       </span>
                     </div>
-                    <div className="home-features3">
-                      <span className="home-heading13">You will get</span>
-                      <div className="home-list2">
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
-                        <Includes rootClassName="includes-root-class-name"></Includes>
+                    <div className='home-features3'>
+                      <span className='home-heading13'>
+                        You will get
+                      </span>
+                      <div className='home-list2'>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
+                        <Includes rootClassName='includes-root-class-name'></Includes>
                       </div>
                     </div>
                   </div>
@@ -440,251 +666,287 @@ const Home = (props) => {
               </main>
             </div>
           </main>
-          <div className="home-help">
-            <span className="home-text35">
+          <div className='home-help'>
+            <span className='home-text35'>
               <span>Need any help?</span>
               <br></br>
             </span>
-            <div className="home-contact-support">
-              <p className="home-text38">Contact support -&gt;</p>
+            <div className='home-contact-support'>
+              <p className='home-text38'>
+                Contact support -&gt;
+              </p>
             </div>
           </div>
-        </section>
-        <section className="home-section12">
-          <header className="home-header10">
-            <header className="home-left4">
-              <span className="section-head">Tempor incididunt</span>
-              <h2 className="home-heading14 section-heading">
+        </section> */}
+        <section className='home-section12'>
+          <header className='home-header10'>
+            <header className='home-left4'>
+              <span className='section-head'>Reviews</span>
+              <h2 className='home-heading14 section-heading'>
                 What users say about us
               </h2>
             </header>
-            <div className="home-right2">
-              <p className="home-paragraph5 section-description">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+            <div className='home-right2'>
+              <p className='home-paragraph5 section-description'>
+                Over 70 happy customers share how we've
+                simplified their lives
               </p>
             </div>
           </header>
-          <main className="home-cards1">
-            <div className="home-container1">
-              <Review rootClassName="review-root-class-name"></Review>
+          <main className='home-cards1'>
+            <div className='home-container1'>
+              <Review rootClassName='review-root-class-name'></Review>
               <Review
-                quote="“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.\u2028\u2028Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.”"
-                rootClassName="review-root-class-name"
+                quote='“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.\u2028\u2028Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.”'
+                rootClassName='review-root-class-name'
               ></Review>
             </div>
-            <div className="home-container2">
+            <div className='home-container2'>
               <Review
-                quote="“Illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”"
-                rootClassName="review-root-class-name"
+                quote='“Illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”'
+                rootClassName='review-root-class-name'
               ></Review>
               <Review
-                quote="“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”"
-                rootClassName="review-root-class-name"
+                quote='“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”'
+                rootClassName='review-root-class-name'
               ></Review>
             </div>
-            <div className="home-container3">
+            <div className='home-container3'>
               <Review
-                quote="“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.”"
-                rootClassName="review-root-class-name"
+                quote='“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.”'
+                rootClassName='review-root-class-name'
               ></Review>
               <Review
-                quote="“Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.”"
-                rootClassName="review-root-class-name"
+                quote='“Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.”'
+                rootClassName='review-root-class-name'
               ></Review>
             </div>
           </main>
-          <div className="home-view-more">
-            <p className="home-text39">View more</p>
+          <div className='home-view-more'>
+            <p className='home-text39'>View more</p>
           </div>
         </section>
-        <section className="home-section14">
-          <header className="home-header11">
-            <span className="section-head">Articles about us</span>
-            <h2 className="home-heading15 section-heading">
+        {/* <section className='home-section14'>
+          <header className='home-header11'>
+            <span className='section-head'>
+              Articles about us
+            </span>
+            <h2 className='home-heading15 section-heading'>
               We’re the app on everyone’s lips
             </h2>
           </header>
-          <main className="home-cards2">
-            <Article rootClassName="article-root-class-name"></Article>
+          <main className='home-cards2'>
+            <Article rootClassName='article-root-class-name'></Article>
             <Article
-              header="techeu"
-              specialHeader="eu"
-              rootClassName="article-root-class-name"
+              header='techeu'
+              specialHeader='eu'
+              rootClassName='article-root-class-name'
             ></Article>
             <Article
-              header="sifted/"
-              rootClassName="article-root-class-name"
+              header='sifted/'
+              rootClassName='article-root-class-name'
             ></Article>
           </main>
-        </section>
-        <section className="home-section16">
-          <header className="home-header12">
-            <span className="section-head">FAQ</span>
-            <h2 className="home-heading16 section-heading">
+        </section> */}
+        <section className='home-section16'>
+          <header className='home-header12'>
+            <span className='section-head'>FAQ</span>
+            <h2 className='home-heading16 section-heading'>
               Frequently asked questions
             </h2>
           </header>
-          <main className="home-accordion">
-            <FAQ rootClassName="faq-root-class-name"></FAQ>
+          <main className='home-accordion'>
+            <FAQ rootClassName='faq-root-class-name'></FAQ>
           </main>
         </section>
-        <section className="home-section18">
-          <main className="home-content5">
-            <header className="home-header13">
-              <h2 className="home-heading17 section-heading">
-                Stop searching online for medications and use Planical app!
+        <section className='home-section18'>
+          <main className='home-content5'>
+            <header className='home-header13'>
+              <h2 className='home-heading17 section-heading'>
+                Stop searching for car and bike servicing -
+                book with ease using Trego!
               </h2>
-              <div className="home-buttons2">
-                <div className="home-ios button">
-                  <img
-                    alt="image"
-                    src="/Icons/apple-200w.png"
-                    className="home-icon"
-                  />
-                  <span className="home-text40">Download for iOS</span>
+              <div className='home-buttons2'>
+                <div className='home-ios button'>
+                  {/* <img
+                    alt='image'
+                    src='/Icons/apple-200w.png'
+                    className='home-icon'
+                  /> */}
+                  <span className='home-text40'>
+                    Book Service Now
+                  </span>
                 </div>
-                <div className="home-android button">
+                {/* <div className='home-android button'>
                   <img
-                    alt="image"
-                    src="/Icons/android-200h.png"
-                    className="home-icon1"
+                    alt='image'
+                    src='/Icons/android-200h.png'
+                    className='home-icon1'
                   />
-                  <span className="home-text41">Download for Android</span>
-                </div>
+                  <span className='home-text41'>
+                    Download for Android
+                  </span>
+                </div> */}
               </div>
             </header>
             <img
-              alt="image"
-              src="/SectionImages/group%201505-1200w.png"
-              className="home-image15"
+              alt='image'
+              src='/SectionImages/group%201505-1200w.png'
+              className='home-image15'
             />
           </main>
         </section>
-        <footer className="home-footer">
-          <div className="home-content6">
-            <main className="home-main-content">
-              <div className="home-content7">
-                <header className="home-main4">
-                  <div className="home-header14">
+        <footer className='home-footer'>
+          <div className='home-content6'>
+            <main className='home-main-content'>
+              <div className='home-content7'>
+                <header className='home-main4'>
+                  <div className='home-header14'>
                     <img
-                      alt="image"
-                      src="/Branding/planical7012-ttpb.svg"
-                      className="home-branding"
+                      alt='image'
+                      src='/Branding/logo-white-final.png'
+                      className='home-branding'
                     />
-                    <span className="home-text42">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <span className='home-text42'>
+                      Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
                     </span>
                   </div>
-                  <div className="home-socials">
+                  <div className='home-socials'>
                     <a
-                      href="https://example.com"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="home-link"
+                      href='https://example.com'
+                      target='_blank'
+                      rel='noreferrer noopener'
+                      className='home-link'
                     >
                       <img
-                        alt="image"
-                        src="/Icons/linkedin-200h.png"
-                        className="social"
+                        alt='image'
+                        src='/Icons/linkedin-200h.png'
+                        className='social'
                       />
                     </a>
                     <a
-                      href="https://example.com"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="home-link1"
+                      href='https://example.com'
+                      target='_blank'
+                      rel='noreferrer noopener'
+                      className='home-link1'
                     >
                       <img
-                        alt="image"
-                        src="/Icons/instagram-200h.png"
-                        className="social"
+                        alt='image'
+                        src='/Icons/instagram-200h.png'
+                        className='social'
                       />
                     </a>
                     <a
-                      href="https://example.com"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="home-link2"
+                      href='https://example.com'
+                      target='_blank'
+                      rel='noreferrer noopener'
+                      className='home-link2'
                     >
                       <img
-                        alt="image"
-                        src="/Icons/twitter-200h.png"
-                        className="social"
+                        alt='image'
+                        src='/Icons/twitter-200h.png'
+                        className='social'
                       />
                     </a>
                   </div>
                 </header>
-                <header className="home-categories">
-                  <div className="home-category">
-                    <div className="home-header15">
-                      <span className="footer-header">Solutions</span>
+                <header className='home-categories'>
+                  <div className='home-category'>
+                    <div className='home-header15'>
+                      <span className='footer-header'>
+                        Solutions
+                      </span>
                     </div>
-                    <div className="home-links">
-                      <span className="footer-link">Responsive Web Design</span>
-                      <span className="footer-link">Responsive Prototypes</span>
-                      <span className="footer-link">Design to Code</span>
-                      <span className="footer-link">
+                    <div className='home-links'>
+                      <span className='footer-link'>
+                        Responsive Web Design
+                      </span>
+                      <span className='footer-link'>
+                        Responsive Prototypes
+                      </span>
+                      <span className='footer-link'>
+                        Design to Code
+                      </span>
+                      <span className='footer-link'>
                         Static Website Builder
                       </span>
-                      <span className="footer-link">
+                      <span className='footer-link'>
                         Static Website Generator
                       </span>
                     </div>
                   </div>
-                  <div className="home-category1">
-                    <div className="home-header16">
-                      <span className="footer-header">Company</span>
+                  <div className='home-category1'>
+                    <div className='home-header16'>
+                      <span className='footer-header'>
+                        Company
+                      </span>
                     </div>
-                    <div className="home-links1">
-                      <span className="footer-link">About</span>
-                      <span className="footer-link">Team</span>
-                      <span className="footer-link">News</span>
-                      <span className="footer-link">Partners</span>
-                      <span className="footer-link">Careers</span>
-                      <span className="footer-link">Press &amp; Media</span>
+                    <div className='home-links1'>
+                      <span className='footer-link'>
+                        About
+                      </span>
+                      <span className='footer-link'>
+                        Team
+                      </span>
+                      <span className='footer-link'>
+                        News
+                      </span>
+                      <span className='footer-link'>
+                        Partners
+                      </span>
+                      <span className='footer-link'>
+                        Careers
+                      </span>
+                      <span className='footer-link'>
+                        Press &amp; Media
+                      </span>
                     </div>
                   </div>
                 </header>
               </div>
-              <section className="home-copyright">
-                <span className="home-text56">
+              <section className='home-copyright'>
+                <span className='home-text56'>
                   © 2022 latitude. All Rights Reserved.
                 </span>
               </section>
             </main>
-            <main className="home-subscribe">
-              <main className="home-main5">
-                <h1 className="home-heading18">Subscribe to our newsletter</h1>
-                <div className="home-input-field">
+            <main className='home-subscribe'>
+              <main className='home-main5'>
+                <h1 className='home-heading18'>
+                  Subscribe to our newsletter
+                </h1>
+                <div className='home-input-field'>
                   <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="home-textinput input"
+                    type='email'
+                    placeholder='Enter your email'
+                    className='home-textinput input'
                   />
-                  <div className="home-buy3 button">
-                    <span className="home-text57">-&gt;</span>
-                    <span className="home-text58">
+                  <div className='home-buy3 button'>
+                    <span className='home-text57'>
+                      -&gt;
+                    </span>
+                    <span className='home-text58'>
                       <span>Subscribe now</span>
                       <br></br>
                     </span>
                   </div>
                 </div>
               </main>
-              <h1 className="home-notice">
-                By subscribing to our newsletter you agree with our Terms and
-                Conditions.
+              <h1 className='home-notice'>
+                By subscribing to our newsletter you agree
+                with our Terms and Conditions.
               </h1>
             </main>
-            <section className="home-copyright1">
-              <span className="home-text61">
+            <section className='home-copyright1'>
+              <span className='home-text61'>
                 © 2022 latitude. All Rights Reserved.
               </span>
             </section>
           </div>
         </footer>
         <div>
-          <div className="home-container5">
+          <div className='home-container5'>
             <Script
               html={`<script>
     /*
@@ -778,8 +1040,12 @@ Here's what the above is doing:
             display: flex;
             align-items: center;
             border-color: #51515a;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             justify-content: center;
             border-bottom-width: 1px;
@@ -906,8 +1172,12 @@ Here's what the above is doing:
             display: flex;
             align-items: center;
             padding-top: 120px;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -973,6 +1243,13 @@ Here's what the above is doing:
             align-items: center;
             flex-direction: row;
             justify-content: center;
+          }
+          .usp {
+            display: none;
+          }
+
+          .usp.active {
+            display: flex;
           }
           .home-content1 {
             gap: var(--dl-space-space-threeunits);
@@ -1040,8 +1317,12 @@ Here's what the above is doing:
             display: flex;
             align-items: center;
             padding-top: var(--dl-space-space-twounits);
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -1217,8 +1498,12 @@ Here's what the above is doing:
             align-items: center;
             padding-top: 120px;
             border-color: #51515a;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -1268,8 +1553,12 @@ Here's what the above is doing:
             display: flex;
             align-items: center;
             padding-top: var(--dl-space-space-fourunits);
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             justify-content: center;
           }
@@ -1329,8 +1618,12 @@ Here's what the above is doing:
             display: flex;
             position: relative;
             align-items: center;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -1342,7 +1635,8 @@ Here's what the above is doing:
             height: 120px;
             display: flex;
             position: absolute;
-            transform: rotateX(240deg) rotateY(25deg) rotateZ(-110deg);
+            transform: rotateX(240deg) rotateY(25deg)
+              rotateZ(-110deg);
             align-items: center;
             flex-direction: column;
             justify-content: center;
@@ -1439,8 +1733,12 @@ Here's what the above is doing:
             display: flex;
             position: relative;
             align-items: center;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -1453,7 +1751,8 @@ Here's what the above is doing:
             margin: auto;
             display: flex;
             position: absolute;
-            transform: rotateX(240deg) rotateY(50deg) rotateZ(-110deg);
+            transform: rotateX(240deg) rotateY(50deg)
+              rotateZ(-110deg);
             align-items: center;
             flex-direction: column;
             justify-content: center;
@@ -1920,8 +2219,12 @@ Here's what the above is doing:
             align-items: center;
             padding-top: 120px;
             border-color: #51515a;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -2013,8 +2316,12 @@ Here's what the above is doing:
             align-items: center;
             padding-top: 120px;
             border-color: #51515a;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -2049,8 +2356,12 @@ Here's what the above is doing:
             align-items: center;
             padding-top: 120px;
             border-color: #51515a;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             padding-bottom: 120px;
             justify-content: center;
@@ -2084,8 +2395,12 @@ Here's what the above is doing:
             display: flex;
             align-items: center;
             padding-top: 120px;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
             justify-content: center;
             background-color: #292929;
@@ -2169,10 +2484,16 @@ Here's what the above is doing:
             display: flex;
             align-items: center;
             padding-top: 120px;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
             justify-content: center;
           }
           .home-content6 {
@@ -2350,15 +2671,21 @@ Here's what the above is doing:
             color: #ffffff;
             height: 24px;
             line-height: 24px;
-            padding-left: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
             outline-style: none;
             background-color: rgba(217, 217, 217, 0);
           }
           .home-buy3 {
             display: flex;
             padding-top: var(--dl-space-space-unit);
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            padding-left: var(
+              --dl-space-space-oneandhalfunits
+            );
+            padding-right: var(
+              --dl-space-space-oneandhalfunits
+            );
             padding-bottom: var(--dl-space-space-unit);
             background-color: #80ff44;
           }
@@ -2579,8 +2906,12 @@ Here's what the above is doing:
           @media (max-width: 767px) {
             .home-content {
               gap: var(--dl-space-space-threeunits);
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
+              padding-left: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-right: var(
+                --dl-space-space-oneandhalfunits
+              );
             }
             .home-heading {
               font-size: 40px;
@@ -2617,7 +2948,9 @@ Here's what the above is doing:
               gap: var(--dl-space-space-oneandhalfunits);
               margin-top: var(--dl-space-space-threeunits);
               border-color: #5a5a5a;
-              margin-bottom: var(--dl-space-space-threeunits);
+              margin-bottom: var(
+                --dl-space-space-threeunits
+              );
               flex-direction: column;
             }
             .home-feature {
@@ -2658,7 +2991,9 @@ Here's what the above is doing:
             }
             .home-section02 {
               gap: var(--dl-space-space-fourunits);
-              padding-bottom: var(--dl-space-space-twounits);
+              padding-bottom: var(
+                --dl-space-space-twounits
+              );
             }
             .home-text15 {
               font-size: 32px;
@@ -2678,30 +3013,54 @@ Here's what the above is doing:
             }
             .home-banner {
               padding-top: var(--dl-space-space-threeunits);
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-              padding-bottom: var(--dl-space-space-threeunits);
+              padding-left: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-right: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-bottom: var(
+                --dl-space-space-threeunits
+              );
             }
             .home-cube1 {
               right: -250px;
             }
             .home-plan {
               padding-top: var(--dl-space-space-fourunits);
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-              padding-bottom: var(--dl-space-space-fourunits);
+              padding-left: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-right: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-bottom: var(
+                --dl-space-space-fourunits
+              );
             }
             .home-plan1 {
               padding-top: var(--dl-space-space-fourunits);
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-              padding-bottom: var(--dl-space-space-fourunits);
+              padding-left: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-right: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-bottom: var(
+                --dl-space-space-fourunits
+              );
             }
             .home-plan2 {
               padding-top: var(--dl-space-space-fourunits);
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-              padding-bottom: var(--dl-space-space-fourunits);
+              padding-left: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-right: var(
+                --dl-space-space-oneandhalfunits
+              );
+              padding-bottom: var(
+                --dl-space-space-fourunits
+              );
             }
             .home-help {
               align-items: center;
@@ -2710,7 +3069,9 @@ Here's what the above is doing:
             }
             .home-section12 {
               padding-top: var(--dl-space-space-fourunits);
-              padding-bottom: var(--dl-space-space-fourunits);
+              padding-bottom: var(
+                --dl-space-space-fourunits
+              );
             }
             .home-cards2 {
               gap: var(--dl-space-space-oneandhalfunits);
@@ -2720,7 +3081,9 @@ Here's what the above is doing:
               padding-top: var(--dl-space-space-fourunits);
             }
             .home-header13 {
-              padding-bottom: var(--dl-space-space-fiveunits);
+              padding-bottom: var(
+                --dl-space-space-fiveunits
+              );
             }
             .home-buttons2 {
               flex-direction: column;
@@ -2805,7 +3168,7 @@ Here's what the above is doing:
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,17 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
   return (
     <>
-      <section className={`card-card ${props.rootClassName} `}>
-        <div className="card-icon">
-          <img alt={props.iconAlt} src={props.icon} className="card-icon1" />
+      <section
+        className={`card-card ${props.rootClassName} `}
+      >
+        <div className='card-icon'>
+          <img
+            alt={props.iconAlt}
+            src={props.icon}
+            className='card-icon1'
+          />
         </div>
-        <main className="card-content">
-          <h1 className="card-header">{props.header}</h1>
-          <p className="card-description">{props.description}</p>
+        <main className='card-content'>
+          <h1 className='card-header'>{props.header}</h1>
+          <p className='card-description'>
+            {props.description}
+          </p>
         </main>
       </section>
       <style jsx>
@@ -80,17 +88,17 @@ const Card = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Card.defaultProps = {
   description:
-    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium',
+    'No 31 Behind Saraswati Convention Hall, 21, Magadi Main Road, Rajajinagar, Bengaluru',
   rootClassName: '',
   icon: '/Icons/group%201316-200w.png',
   iconAlt: 'image',
-  header: 'Sima Mosbacher',
-}
+  header: 'HSR Enterprises',
+};
 
 Card.propTypes = {
   description: PropTypes.string,
@@ -98,6 +106,6 @@ Card.propTypes = {
   icon: PropTypes.string,
   iconAlt: PropTypes.string,
   header: PropTypes.string,
-}
+};
 
-export default Card
+export default Card;

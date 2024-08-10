@@ -1,17 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Mark = (props) => {
   return (
     <>
-      <div className="mark-mark">
-        <div className="mark-icon">
-          <svg viewBox="0 0 1024 1024" className="mark-icon1">
-            <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-          </svg>
-        </div>
-        <p className="mark-label">{props.label}</p>
+      <div className='mark-mark'>
+        {props.number ? (
+          <span
+            className='mark-icon'
+            style={{
+              color: '#c6ff4b',
+              fontSize: 12,
+              paddingLeft: 12,
+              paddingRight: 12,
+              fontWeight: 'bold',
+            }}
+          >
+            {props.number}
+          </span>
+        ) : (
+          <div className='mark-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='mark-icon1'
+            >
+              <path d='M384 690l452-452 60 60-512 512-238-238 60-60z'></path>
+            </svg>
+          </div>
+        )}
+        <p className='mark-label'>{props.label}</p>
       </div>
       <style jsx>
         {`
@@ -47,15 +65,15 @@ const Mark = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Mark.defaultProps = {
   label: 'Duis aute irure dolor in reprehenderit',
-}
+};
 
 Mark.propTypes = {
   label: PropTypes.string,
-}
+};
 
-export default Mark
+export default Mark;

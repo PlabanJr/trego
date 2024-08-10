@@ -12,6 +12,7 @@ import Excludes from '../components/excludes';
 import Review from '../components/review';
 import Article from '../components/article';
 import FAQ from '../components/faq';
+import UnderlinedText from '../components/underlined-text';
 
 const Home = (props) => {
   const [currentTab, setCurrentTab] = React.useState(0);
@@ -34,18 +35,30 @@ const Home = (props) => {
               <main className='home-main'>
                 <header className='home-header'>
                   <h1 className='home-heading'>
-                    Need Service? Go with Trego
+                    Get your car or bike service through{' '}
+                    <span
+                      style={{
+                        fontWeight: 'bold',
+                        textDecoration: 'underline',
+                        textDecorationColor: '#80ff44',
+                        textDecorationStyle: 'wavy',
+                        textDecorationThickness: '2px',
+                        textUnderlineOffset: '6px',
+                      }}
+                    >
+                      Trego
+                    </span>
                   </h1>
                   <span className='home-caption'>
-                    Relax! we’ll handle your car or bike
-                    service with{' '}
+                    We help you get your car or bike
+                    serviced at{' '}
                     <span
                       style={{
                         color: '#80ff44',
                         fontWeight: 'bold',
                       }}
                     >
-                      Authorized Dealers
+                      Authorized service centers
                     </span>
                     , hassle-free.
                   </span>
@@ -114,11 +127,12 @@ const Home = (props) => {
               onClick={() => onTabClick(0)}
             >
               <h3 className='home-text03'>
-                Periodic Service
+                Vehicle Servicing<br></br>at Authorized
+                Centers
               </h3>
-              <p className='home-text04'>
+              {/* <p className='home-text04'>
                 Smooth Running with Regular Maintenance
-              </p>
+              </p> */}
             </header>
             <header
               className={`feature home-feature1 ${
@@ -127,11 +141,9 @@ const Home = (props) => {
               onClick={() => onTabClick(1)}
             >
               <h3 className='home-text05'>
-                Breakdown assistance
+                24/7 Emergency Roadside Assistance
               </h3>
-              <p className='home-text06'>
-                24/7 Emergency Roadside Help
-              </p>
+              {/* <p className='home-text06'>Roadside Help</p> */}
             </header>
             <header
               className={`feature home-feature2 ${
@@ -140,11 +152,11 @@ const Home = (props) => {
               onClick={() => onTabClick(2)}
             >
               <h3 className='home-text07'>
-                Complete Ownership Support
+                Comprehensive Ownership Support
               </h3>
-              <p className='home-text08'>
+              {/* <p className='home-text08'>
                 Support for Insurance & More
-              </p>
+              </p> */}
             </header>
           </div>
           {currentTab === 0 ? (
@@ -155,19 +167,29 @@ const Home = (props) => {
                   style={{ alignItems: 'baseline' }}
                 >
                   <h2 className='home-heading01'>
-                    Schedule a free periodic or general
-                    service
+                    Book your vehicle servicing at a nearby
+                    Authorized Service center
                   </h2>
-                  {/* <p
+                  <p
                     className='home-paragraph'
-                    style={{ textAlign: 'left' 
-                    }}
-                  > */}
-                  <div className='home-checkmarks'>
-                    <Mark label='Free Company Servicing'></Mark>
-                    <Mark label='General servicing'></Mark>
-                  </div>
-                  {/* </p> */}
+                    style={{ textAlign: 'left' }}
+                  >
+                    <span>
+                      Periodic car care and maintenace can
+                      be a hefty affair with working
+                      weekdays and busy weekends.
+                    </span>
+                    <br />
+                    <br />
+                    <span>
+                      We help you book your preferred time
+                      slot for vehicle servicing at a nearby{' '}
+                      <UnderlinedText>
+                        Authorized Service center
+                      </UnderlinedText>{' '}
+                      with exclusive Pick & Drop Assistance
+                    </span>
+                  </p>
                 </main>
                 {/* <div className='home-explore-more'>
                   <p className='home-text14'>
@@ -192,15 +214,29 @@ const Home = (props) => {
                   style={{ alignItems: 'baseline' }}
                 >
                   <h2 className='home-heading01'>
-                    Trego is just a few clicks away when you
-                    are in need.
+                    Get immediate help in just a few clicks
+                    away when you are in need.
                   </h2>
-                  {/* <p className='home-paragraph'> */}
-                  <div className='home-checkmarks'>
-                    <Mark label='Towing service'></Mark>
-                    <Mark label='Insurance Claim Assistance'></Mark>
-                  </div>
-                  {/* </p> */}
+                  <p
+                    className='home-paragraph'
+                    style={{ textAlign: 'left' }}
+                  >
+                    <span>
+                      Vehicle emergencies can happen
+                      unexpectedly. We understands this and
+                      we got you covered
+                    </span>
+                    <br />
+                    <br />
+                    <span>
+                      We help you with prompt{' '}
+                      <UnderlinedText>
+                        roadside assistance
+                      </UnderlinedText>{' '}
+                      and reliable support in such
+                      unexpected situations
+                    </span>
+                  </p>
                 </main>
                 {/* <div className='home-explore-more'>
                   <p className='home-text14'>
@@ -225,16 +261,43 @@ const Home = (props) => {
                   style={{ alignItems: 'baseline' }}
                 >
                   <h2 className='home-heading01'>
-                    Comprehensive support for all ownership
-                    needs
+                    Effortlessly manage all your
+                    vehicle-related needs in one place
                   </h2>
-                  {/* <p className='home-paragraph'> */}
-                  <div className='home-checkmarks'>
-                    <Mark label='Insurance Assistance'></Mark>
-                    <Mark label='PUCC'></Mark>
-                    <Mark label='Online documents and more'></Mark>
-                  </div>
-                  {/* </p> */}
+                  <p
+                    className='home-paragraph'
+                    style={{ textAlign: 'left' }}
+                  >
+                    <span>
+                      Keeping track of all your
+                      vehicle-related documents can be a
+                      challenging task. We got your back
+                    </span>
+                    <br />
+                    <br />
+                    <span>
+                      <UnderlinedText>
+                        Timely Service Reminders
+                      </UnderlinedText>
+                      {', '}
+                      <UnderlinedText>
+                        Insurance
+                      </UnderlinedText>
+                      {', '}
+                      <UnderlinedText>PUCC</UnderlinedText>
+                      {', '}
+                      <UnderlinedText>
+                        Challans
+                      </UnderlinedText>
+                      {', '}
+                      <UnderlinedText>
+                        Licenses
+                      </UnderlinedText>
+                      {', '}
+                      nd all your vehicle-related needs
+                      managed seamlessly at Trego
+                    </span>
+                  </p>
                 </main>
                 {/* <div className='home-explore-more'>
                   <p className='home-text14'>
@@ -277,25 +340,29 @@ const Home = (props) => {
             >
               <div className='home-main2'>
                 <div className='home-caption2'>
-                  <span className='section-head'>
-                    How Trego works?
+                  <span className='home-section04 section-head'>
+                    Why authorized service centers?
                   </span>
                 </div>
                 <div className='home-heading02'>
                   <h2 className='section-heading'>
-                    Effortless Vehicle Service at Your
-                    Fingertips
+                    Benefits of{' '}
+                    <UnderlinedText>
+                      Authorized Service Centers
+                    </UnderlinedText>{' '}
+                    for Your Vehicle
                   </h2>
                   {/* <p className='section-description'>
                     Use Trego to locate the nearest
                     authorized service centers for your bike
                     or car.
                   </p> */}
+
                   <div className='home-checkmarks'>
-                    <Mark label='Find Nearest Authorized Service Centers with Trego'></Mark>
-                    <Mark label='Choose the date and time that works best for you'></Mark>
-                    <Mark label='Vehicle pick-up and drop-off at your convenience'></Mark>
-                    <Mark label='Enjoy exclusive discounts on your service'></Mark>
+                    <Mark label='Boosts resale value with documented service'></Mark>
+                    <Mark label='Genuine parts ensure quality and compatibility'></Mark>
+                    <Mark label='Factory-trained experts with updated protocols'></Mark>
+                    <Mark label='Maintains warranty, avoiding voiding issues'></Mark>
                   </div>
                 </div>
               </div>
@@ -317,15 +384,15 @@ const Home = (props) => {
             <div className='home-content3'>
               <main className='home-main3'>
                 <header className='home-caption3'>
-                  <span className='home-section04 section-head'>
-                    Why authorized service centers?
+                  <span className='section-head'>
+                    How Trego works?
                   </span>
                 </header>
                 <main className='home-heading04'>
                   <header className='home-header02'>
                     <h2 className='section-heading'>
-                      Authorized Service Benefits for Your
-                      Vehicle
+                      Effortless Vehicle Service at Your
+                      Fingertips
                     </h2>
                     {/* <p className='section-description'>
                       We’ll handle the pick-up of your
@@ -334,10 +401,38 @@ const Home = (props) => {
                     </p> */}
                   </header>
                   <div className='home-checkmarks'>
-                    <Mark label='Boosts resale value with documented service'></Mark>
-                    <Mark label='Genuine parts ensure quality and compatibility'></Mark>
-                    <Mark label='Factory-trained experts with updated protocols'></Mark>
-                    <Mark label='Maintains warranty, avoiding voiding issues'></Mark>
+                    <Mark
+                      number={1}
+                      label='Find nearest authorized service centers with Trego'
+                    ></Mark>
+                    <Mark
+                      number={2}
+                      label='Choose the slot that works best for you'
+                    ></Mark>
+                    <Mark
+                      number={3}
+                      label='Our trusted partner picks up your vehicle'
+                    ></Mark>
+                    <Mark
+                      number={4}
+                      label='Receive a discounted service estimate'
+                    ></Mark>
+                    <Mark
+                      number={5}
+                      label='Give your approval'
+                    ></Mark>
+                    <Mark
+                      number={6}
+                      label='Get real-time service updates'
+                    ></Mark>
+                    <Mark
+                      number={7}
+                      label='Our partner drops the vehicle back to you'
+                    ></Mark>
+                    <Mark
+                      number={8}
+                      label='Check your vehicle and pay through your preferred method'
+                    ></Mark>
                   </div>
                 </main>
               </main>

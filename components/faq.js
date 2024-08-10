@@ -1,31 +1,34 @@
-import React from 'react'
+import React from 'react';
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const FAQ = (props) => {
   return (
     <>
-      <div className={`faq-accordion ${props.rootClassName} `}>
+      <div
+        className={`faq-accordion ${props.rootClassName} `}
+      >
         <div
-          data-role="accordion-container"
-          className="faq-element accordion-element"
+          data-role='accordion-container'
+          className='faq-element accordion-element'
         >
-          <div className="faq-details">
-            <span className="faq-text">
-              What is sit amet, consectetur adipiscing elit, sed do?
+          <div className='faq-details'>
+            <span className='faq-text'>
+              How do I book a service with Trego?
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
                 }}
               />
             </span>
-            <span data-role="accordion-content" className="faq-text01">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role='accordion-content'
+              className='faq-text01'
+            >
+              Simply use our app or website to find a nearby
+              authorized service center, choose a date and
+              time that works for you, and confirm your
+              booking in just a few clicks.
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -33,28 +36,31 @@ const FAQ = (props) => {
               />
             </span>
           </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" className="faq-icon">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
             </svg>
           </div>
         </div>
         <div
-          data-role="accordion-container"
-          className="faq-element1 accordion-element"
+          data-role='accordion-container'
+          className='faq-element1 accordion-element'
         >
-          <div className="faq-details1">
-            <span className="faq-text02">
-              We&apos;ll update amet, consectetur adipiscing elit until
-              you&apos;re 100% happy.
+          <div className='faq-details1'>
+            <span className='faq-text02'>
+              Can I get my vehicle picked up and dropped
+              off?
             </span>
-            <span data-role="accordion-content" className="faq-text03">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role='accordion-content'
+              className='faq-text03'
+            >
+              Yes, Trego offers convenient pickup and
+              drop-off services for your vehicle, so you can
+              focus on your day without any interruptions.
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -62,27 +68,32 @@ const FAQ = (props) => {
               />
             </span>
           </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" className="faq-icon02">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon02'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
             </svg>
           </div>
         </div>
         <div
-          data-role="accordion-container"
-          className="faq-element2 accordion-element"
+          data-role='accordion-container'
+          className='faq-element2 accordion-element'
         >
-          <div className="faq-details2">
-            <span className="faq-text04">
-              Is it really sit amet, consectetur adipiscing elit, sed do?
+          <div className='faq-details2'>
+            <span className='faq-text04'>
+              How will I explain problems in my Bike or Car?
             </span>
-            <span data-role="accordion-content" className="faq-text05">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role='accordion-content'
+              className='faq-text05'
+            >
+              You can provide all the problems with your
+              bike at the time of booking. This way, the
+              service center will have a complete
+              understanding of the issues and can prepare
+              accordingly.
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -90,28 +101,32 @@ const FAQ = (props) => {
               />
             </span>
           </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" className="faq-icon04">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon04'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
             </svg>
           </div>
         </div>
         <div
-          data-role="accordion-container"
-          className="faq-element3 accordion-element"
+          data-role='accordion-container'
+          className='faq-element3 accordion-element'
         >
-          <div className="faq-details3">
-            <span className="faq-text06">
-              We work, what is sit amet, consectetur adipiscing elit, sed do
-              sint occaecat cupidatat non proident
+          <div className='faq-details3'>
+            <span className='faq-text06'>
+              What types of services are available through
+              Trego?
             </span>
-            <span data-role="accordion-content" className="faq-text07">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role='accordion-content'
+              className='faq-text07'
+            >
+              We offer a wide range of services, including
+              regular maintenance, repairs, insurance
+              assistance, PUC, and more, all through
+              authorized service centers.
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -119,32 +134,36 @@ const FAQ = (props) => {
               />
             </span>
           </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" className="faq-icon06">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon06'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
             </svg>
           </div>
         </div>
         <div
-          data-role="accordion-container"
-          className="faq-element4 accordion-element"
+          data-role='accordion-container'
+          className='faq-element4 accordion-element'
         >
-          <div className="faq-details4">
-            <span className="faq-text08">
-              What is sit amet, consectetur adipiscing elit, sed do?
+          <div className='faq-details4'>
+            <span className='faq-text08'>
+              Are there any discounts or offers available?
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
                 }}
               />
             </span>
-            <span data-role="accordion-content" className="faq-text09">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role='accordion-content'
+              className='faq-text09'
+            >
+              Yes, Service Centers have curated special
+              discounts & offers for Trego on various
+              services, helping you save money while
+              maintaining your vehicle.
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -152,27 +171,31 @@ const FAQ = (props) => {
               />
             </span>
           </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" className="faq-icon08">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon08'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
             </svg>
           </div>
         </div>
         <div
-          data-role="accordion-container"
-          className="faq-element5 accordion-element"
+          data-role='accordion-container'
+          className='faq-element5 accordion-element'
         >
-          <div className="faq-details5">
-            <span className="faq-text10">
-              Amet, consectetur adipiscing elit mollit anim id est laborum.
+          <div className='faq-details5'>
+            <span className='faq-text10'>
+              Is my vehicle's warranty maintained when using
+              Trego?
             </span>
-            <span data-role="accordion-content" className="faq-text11">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role='accordion-content'
+              className='faq-text11'
+            >
+              Absolutely. By choosing authorized service
+              centers through Trego, your vehicle’s warranty
+              remains intact.
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -180,9 +203,110 @@ const FAQ = (props) => {
               />
             </span>
           </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" className="faq-icon10">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon10'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-role='accordion-container'
+          className='faq-element5 accordion-element'
+        >
+          <div className='faq-details5'>
+            <span className='faq-text10'>
+              What if I need assistance with an insurance
+              claim?
+            </span>
+            <span
+              data-role='accordion-content'
+              className='faq-text11'
+            >
+              Trego provides comprehensive service
+              assistance including help with insurance
+              claims.
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+          </div>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon10'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
+            </svg>
+          </div>
+        </div>
+        {/* <div
+          data-role='accordion-container'
+          className='faq-element5 accordion-element'
+        >
+          <div className='faq-details5'>
+            <span className='faq-text10'>
+              What if I need assistance with an insurance
+              claim?{' '}
+            </span>
+            <span
+              data-role='accordion-content'
+              className='faq-text11'
+            >
+              Trego provides comprehensive service
+              assistance including help with insurance
+              claims.
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+          </div>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon10'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
+            </svg>
+          </div>
+        </div> */}
+        <div
+          data-role='accordion-container'
+          className='faq-element5 accordion-element'
+        >
+          <div className='faq-details5'>
+            <span className='faq-text10'>
+              Will Trego help with post-service feedback?
+            </span>
+            <span
+              data-role='accordion-content'
+              className='faq-text11'
+            >
+              Yes, Trego values your feedback. After your
+              service, you will have the opportunity to
+              provide feedback on your experience. Your
+              input helps us improve our services and
+              ensures that we continue to meet your
+              expectations.
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+          </div>
+          <div data-role='accordion-icon'>
+            <svg
+              viewBox='0 0 1024 1024'
+              className='faq-icon10'
+            >
+              <path d='M366 708l196-196-196-196 60-60 256 256-256 256z'></path>
             </svg>
           </div>
         </div>
@@ -201,7 +325,9 @@ const FAQ = (props) => {
             width: 100%;
             max-width: 800px;
             padding-top: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
           }
           .faq-details {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -236,7 +362,9 @@ const FAQ = (props) => {
             width: 100%;
             max-width: 800px;
             padding-top: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
           }
           .faq-details1 {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -271,7 +399,9 @@ const FAQ = (props) => {
             width: 100%;
             max-width: 800px;
             padding-top: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
           }
           .faq-details2 {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -306,7 +436,9 @@ const FAQ = (props) => {
             width: 100%;
             max-width: 800px;
             padding-top: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
           }
           .faq-details3 {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -341,7 +473,9 @@ const FAQ = (props) => {
             width: 100%;
             max-width: 800px;
             padding-top: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
           }
           .faq-details4 {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -376,7 +510,9 @@ const FAQ = (props) => {
             width: 100%;
             max-width: 800px;
             padding-top: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-threeunits);
+            padding-bottom: var(
+              --dl-space-space-threeunits
+            );
           }
           .faq-details5 {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -437,15 +573,15 @@ const FAQ = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 FAQ.defaultProps = {
   rootClassName: '',
-}
+};
 
 FAQ.propTypes = {
   rootClassName: PropTypes.string,
-}
+};
 
-export default FAQ
+export default FAQ;

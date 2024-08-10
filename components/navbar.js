@@ -16,15 +16,24 @@ const Navbar = (props) => {
         />
         <div className='navbar-nav-content'>
           <div className='navbar-nav-links'>
-            <span className='navbar-link nav-link'>
-              Features
-            </span>
-            <span className='nav-link'>Why us</span>
-            <span className='nav-link'>Prices</span>
-            <span className='nav-link'>Contact</span>
+            <a href='#features'>
+              <span className='navbar-link nav-link'>
+                Why us
+              </span>
+            </a>
+            <a href='#how-it-works'>
+              <span className='navbar-link nav-link'>
+                How it works
+              </span>
+            </a>
+            <a href='#faq'>
+              <span className='navbar-link nav-link'>
+                FAQs
+              </span>
+            </a>
           </div>
           <div className='get-started navbar-get-started'>
-            <span className='navbar-text'>Get started</span>
+            <span className='navbar-text'>Contact us</span>
           </div>
           <div
             id='open-mobile-menu'
@@ -60,15 +69,24 @@ const Navbar = (props) => {
             </div>
           </div>
           <div className='navbar-nav-links1'>
-            <span className='nav-link'>Features</span>
-            <span className='nav-link'>Why us</span>
-            <span className='nav-link'>Prices</span>
-            <span className='nav-link'>Contact</span>
+            <a href='#features'>
+              <span className='navbar-link nav-link'>
+                Why us
+              </span>
+            </a>
+            <a href='#how-it-works'>
+              <span className='navbar-link nav-link'>
+                How it works
+              </span>
+            </a>
+            <a href='#faq'>
+              <span className='navbar-link nav-link'>
+                FAQs
+              </span>
+            </a>
           </div>
           <div className='get-started'>
-            <span className='navbar-text1'>
-              Get started
-            </span>
+            <span className='navbar-text1'>Contact us</span>
           </div>
         </div>
         <div>

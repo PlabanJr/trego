@@ -34,13 +34,20 @@ const Home = (props) => {
               <main className='home-main'>
                 <header className='home-header'>
                   <h1 className='home-heading'>
-                    Book Trusted Car & Bike Servicing with
-                    Ease
+                    Need Service? Go with Trego
                   </h1>
                   <span className='home-caption'>
-                    Relax at work—we’ll handle your car or
-                    bike service with authorized dealers,
-                    hassle-free.
+                    Relax! we’ll handle your car or bike
+                    service with{' '}
+                    <span
+                      style={{
+                        color: '#80ff44',
+                        fontWeight: 'bold',
+                      }}
+                    >
+                      Authorized Dealers
+                    </span>
+                    , hassle-free.
                   </span>
                 </header>
                 <div className='home-buttons'>
@@ -49,11 +56,11 @@ const Home = (props) => {
                       Book Service Now
                     </span>
                   </div>
-                  <div className='home-get-started1 button'>
+                  {/* <div className='home-get-started1 button'>
                     <span className='home-text01'>
                       Explore Services
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </main>
               <div className='home-highlight'>
@@ -95,9 +102,9 @@ const Home = (props) => {
             </div>
           </div>
         </section>
-        <section className='home-section01'>
+        <section className='home-section01' id='features'>
           <h2 className='home-text02'>
-            Trego Has You Covered, Anytime
+            What do we do for you?
           </h2>
           <div className='home-features'>
             <header
@@ -107,10 +114,10 @@ const Home = (props) => {
               onClick={() => onTabClick(0)}
             >
               <h3 className='home-text03'>
-                Pick & Drop Assist
+                Periodic Service
               </h3>
               <p className='home-text04'>
-                Hassle-Free Pick & Drop Service
+                Smooth Running with Regular Maintenance
               </p>
             </header>
             <header
@@ -120,10 +127,10 @@ const Home = (props) => {
               onClick={() => onTabClick(1)}
             >
               <h3 className='home-text05'>
-                Live Service Updates
+                Breakdown assistance
               </h3>
               <p className='home-text06'>
-                Stay Informed with Realtime Updates
+                24/7 Emergency Roadside Help
               </p>
             </header>
             <header
@@ -133,41 +140,34 @@ const Home = (props) => {
               onClick={() => onTabClick(2)}
             >
               <h3 className='home-text07'>
-                Upfront Cost Estimation
+                Complete Ownership Support
               </h3>
               <p className='home-text08'>
-                Know Your Costs Before You Commit
+                Support for Insurance & More
               </p>
             </header>
           </div>
           {currentTab === 0 ? (
             <div className='home-note'>
               <div className='home-content1'>
-                <main className='home-main1'>
+                <main
+                  className='home-main1'
+                  style={{ alignItems: 'baseline' }}
+                >
                   <h2 className='home-heading01'>
-                    Convenient, and Reliable Pick & Drop
-                    Service
+                    Schedule a free periodic or general
+                    service
                   </h2>
-                  <p className='home-paragraph'>
-                    <span>
-                      Enjoy the convenience of our
-                      effortless pick and drop service. We
-                      manage all the logistics, from
-                      scheduling to transport, so you can
-                      focus on your day. Our seamless
-                      process ensures your vehicle is in
-                      good hands and keeps you informed
-                      throughout.
-                    </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      Trust us to pick up and return your
-                      vehicle efficiently, allowing you to
-                      stay focused on what matters most.
-                    </span>
-                    <br></br>
-                  </p>
+                  {/* <p
+                    className='home-paragraph'
+                    style={{ textAlign: 'left' 
+                    }}
+                  > */}
+                  <div className='home-checkmarks'>
+                    <Mark label='Free Company Servicing'></Mark>
+                    <Mark label='General servicing'></Mark>
+                  </div>
+                  {/* </p> */}
                 </main>
                 {/* <div className='home-explore-more'>
                   <p className='home-text14'>
@@ -187,32 +187,20 @@ const Home = (props) => {
           {currentTab === 1 ? (
             <div className='home-note'>
               <div className='home-content1'>
-                <main className='home-main1'>
+                <main
+                  className='home-main1'
+                  style={{ alignItems: 'baseline' }}
+                >
                   <h2 className='home-heading01'>
-                    Stay informed with Real-time Service
-                    Updates (Coming Soon)
+                    Trego is just a few clicks away when you
+                    are in need.
                   </h2>
-                  <p className='home-paragraph'>
-                    <span>
-                      Get ready for real-time service
-                      updates with our upcoming feature.
-                      We’ll soon offer continuous progress
-                      reports, so you’ll always be informed
-                      about your vehicle’s status. From
-                      start to finish, our transparent
-                      updates will keep you connected and in
-                      control.
-                    </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      Stay tuned for instant updates that
-                      will make managing your service
-                      experience even more convenient and
-                      hassle-free.
-                    </span>
-                    <br></br>
-                  </p>
+                  {/* <p className='home-paragraph'> */}
+                  <div className='home-checkmarks'>
+                    <Mark label='Towing service'></Mark>
+                    <Mark label='Insurance Claim Assistance'></Mark>
+                  </div>
+                  {/* </p> */}
                 </main>
                 {/* <div className='home-explore-more'>
                   <p className='home-text14'>
@@ -232,31 +220,21 @@ const Home = (props) => {
           {currentTab === 2 ? (
             <div className='home-note'>
               <div className='home-content1'>
-                <main className='home-main1'>
+                <main
+                  className='home-main1'
+                  style={{ alignItems: 'baseline' }}
+                >
                   <h2 className='home-heading01'>
-                    Transparent Upfront Cost Estimation
-                    (Coming Soon)
+                    Comprehensive support for all ownership
+                    needs
                   </h2>
-                  <p className='home-paragraph'>
-                    <span>
-                      Soon, you'll be able to access clear
-                      and upfront cost estimates for all
-                      your vehicle services. Our upcoming
-                      feature will provide precise pricing
-                      details before you commit, ensuring
-                      you know exactly what to expect. With
-                      transparent cost information at your
-                      fingertips, you can plan and budget
-                      with confidence.
-                    </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      Stay tuned for a more informed and
-                      hassle-free service experience.
-                    </span>
-                    <br></br>
-                  </p>
+                  {/* <p className='home-paragraph'> */}
+                  <div className='home-checkmarks'>
+                    <Mark label='Insurance Assistance'></Mark>
+                    <Mark label='PUCC'></Mark>
+                    <Mark label='Online documents and more'></Mark>
+                  </div>
+                  {/* </p> */}
                 </main>
                 {/* <div className='home-explore-more'>
                   <p className='home-text14'>
@@ -276,14 +254,14 @@ const Home = (props) => {
         </section>
         <section className='home-section02'>
           <header className='home-header01'>
-            <h2 className='home-text15'>
-              How do we Simplify your vehicle servicing?
-            </h2>
-            <span className='home-text16'>
+            {/* <h2 className='home-text15'>
+              How Trego works ?
+            </h2> */}
+            {/* <span className='home-text16'>
               Our platform makes vehicle servicing easy and
               convenient. <br />
               Here's how it works
-            </span>
+            </span> */}
           </header>
           <section className='home-note1'>
             <div className='home-image09'>
@@ -293,26 +271,32 @@ const Home = (props) => {
                 className='home-image10'
               />
             </div>
-            <div className='home-content2'>
+            <div
+              className='home-content2'
+              id='how-it-works'
+            >
               <div className='home-main2'>
                 <div className='home-caption2'>
                   <span className='section-head'>
-                    Book a slot
+                    How Trego works?
                   </span>
                 </div>
                 <div className='home-heading02'>
                   <h2 className='section-heading'>
-                    Book your vehicle service easily through
-                    our platform.
+                    Effortless Vehicle Service at Your
+                    Fingertips
                   </h2>
-                  <p className='section-description'>
-                    Our intuitive system simplifies
-                    scheduling, so you can easily arrange
-                    your service without any hassle. Enjoy a
-                    streamlined process that puts you in
-                    control, making vehicle maintenance
-                    straightforward and stress-free.
-                  </p>
+                  {/* <p className='section-description'>
+                    Use Trego to locate the nearest
+                    authorized service centers for your bike
+                    or car.
+                  </p> */}
+                  <div className='home-checkmarks'>
+                    <Mark label='Find Nearest Authorized Service Centers with Trego'></Mark>
+                    <Mark label='Choose the date and time that works best for you'></Mark>
+                    <Mark label='Vehicle pick-up and drop-off at your convenience'></Mark>
+                    <Mark label='Enjoy exclusive discounts on your service'></Mark>
+                  </div>
                 </div>
               </div>
               <div className='home-get-started2 button'>
@@ -334,24 +318,26 @@ const Home = (props) => {
               <main className='home-main3'>
                 <header className='home-caption3'>
                   <span className='home-section04 section-head'>
-                    Pick-Up Service
+                    Why authorized service centers?
                   </span>
                 </header>
                 <main className='home-heading04'>
                   <header className='home-header02'>
                     <h2 className='section-heading'>
-                      Pick-Up Service, Wherever You Are
+                      Authorized Service Benefits for Your
+                      Vehicle
                     </h2>
-                    <p className='section-description'>
+                    {/* <p className='section-description'>
                       We’ll handle the pick-up of your
                       vehicle, ensuring it arrives at the
                       service center safely and on time.
-                    </p>
+                    </p> */}
                   </header>
                   <div className='home-checkmarks'>
-                    <Mark label='We come to you for a hassle-free vehicle pick-up'></Mark>
-                    <Mark label='Your vehicle is handled with the utmost care during collection'></Mark>
-                    <Mark label='Pick a time that suits your schedule for an easy experience'></Mark>
+                    <Mark label='Boosts resale value with documented service'></Mark>
+                    <Mark label='Genuine parts ensure quality and compatibility'></Mark>
+                    <Mark label='Factory-trained experts with updated protocols'></Mark>
+                    <Mark label='Maintains warranty, avoiding voiding issues'></Mark>
                   </div>
                 </main>
               </main>
@@ -362,19 +348,19 @@ const Home = (props) => {
               </div> */}
             </div>
           </section>
-          <section className='home-note1'>
-            <div className='home-image09'>
+          {/* <section className='home-note1'> */}
+          {/* <div className='home-image09'>
               <img
                 alt='image'
                 src='/SectionImages/group%201428-1200w.png'
                 className='home-image10'
               />
-            </div>
-            <div className='home-content2'>
+            </div> */}
+          {/* <div className='home-content2'>
               <div className='home-main2'>
                 <div className='home-caption2'>
                   <span className='section-head'>
-                    Drop-Off Service
+                    Brands we service
                   </span>
                 </div>
                 <div className='home-heading02'>
@@ -394,14 +380,14 @@ const Home = (props) => {
                   <Mark label='Your vehicle is handled with care throughout the return'></Mark>
                   <Mark label='Select a delivery time that works for you for a seamless experience'></Mark>
                 </div>
-              </div>
-              {/* <div className='home-get-started2 button'>
+              </div> */}
+          {/* <div className='home-get-started2 button'>
                 <span className='home-text17'>
                   Book a slot
                 </span>
               </div> */}
-            </div>
-          </section>
+          {/* </div> */}
+          {/* </section> */}
         </section>
         <section className='home-section05'>
           <header className='home-header03'>
@@ -424,14 +410,22 @@ const Home = (props) => {
             </div> */}
           </header>
           <main className='home-cards'>
-            <Card rootClassName='card-root-class-name'></Card>
+            <Card
+              rootClassName='card-root-class-name'
+              header={'M/S KEERTHI'}
+              description={`Residency Road Richmond Town Bengaluru, Karnataka`}
+            ></Card>
             <Card
               icon='/Icons/group%201314-200h.png'
               rootClassName='card-root-class-name1'
+              header={'HSR Enterprises'}
+              description={`Magadi Main Road, Rajajinagar, Bengaluru`}
             ></Card>
             <Card
               icon='/Icons/group%201317-200h.png'
               rootClassName='card-root-class-name2'
+              header={'Advaith Hyundai'}
+              description={`Shama Rao Compound, Mission Road, Bangalore `}
             ></Card>
           </main>
         </section>
@@ -748,7 +742,7 @@ const Home = (props) => {
             ></Article>
           </main>
         </section> */}
-        <section className='home-section16'>
+        <section className='home-section16' id='faq'>
           <header className='home-header12'>
             <span className='section-head'>FAQ</span>
             <h2 className='home-heading16 section-heading'>
@@ -808,50 +802,37 @@ const Home = (props) => {
                       className='home-branding'
                     />
                     <span className='home-text42'>
-                      Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit.
+                      Need Service? Go with Trego
                     </span>
                   </div>
                   <div className='home-socials'>
                     <a
-                      href='https://example.com'
-                      target='_blank'
-                      rel='noreferrer noopener'
-                      className='home-link'
-                    >
-                      <img
-                        alt='image'
-                        src='/Icons/linkedin-200h.png'
-                        className='social'
-                      />
-                    </a>
-                    <a
-                      href='https://example.com'
+                      href='https://www.instagram.com/tregoapp/'
                       target='_blank'
                       rel='noreferrer noopener'
                       className='home-link1'
                     >
                       <img
                         alt='image'
-                        src='/Icons/instagram-200h.png'
+                        src='/Icons/ig.png'
                         className='social'
                       />
                     </a>
                     <a
-                      href='https://example.com'
+                      href='https://www.facebook.com/profile.php?id=61564160848345'
                       target='_blank'
                       rel='noreferrer noopener'
                       className='home-link2'
                     >
                       <img
                         alt='image'
-                        src='/Icons/twitter-200h.png'
+                        src='/Icons/fb.png'
                         className='social'
                       />
                     </a>
                   </div>
                 </header>
-                <header className='home-categories'>
+                {/* <header className='home-categories'>
                   <div className='home-category'>
                     <div className='home-header15'>
                       <span className='footer-header'>
@@ -860,19 +841,13 @@ const Home = (props) => {
                     </div>
                     <div className='home-links'>
                       <span className='footer-link'>
-                        Responsive Web Design
+                        Periodic Servicing
                       </span>
                       <span className='footer-link'>
-                        Responsive Prototypes
+                        Breakdown Assistance
                       </span>
                       <span className='footer-link'>
-                        Design to Code
-                      </span>
-                      <span className='footer-link'>
-                        Static Website Builder
-                      </span>
-                      <span className='footer-link'>
-                        Static Website Generator
+                        Complete Ownership Support
                       </span>
                     </div>
                   </div>
@@ -903,21 +878,30 @@ const Home = (props) => {
                       </span>
                     </div>
                   </div>
-                </header>
+                </header> */}
               </div>
               <section className='home-copyright'>
                 <span className='home-text56'>
-                  © 2022 latitude. All Rights Reserved.
+                  © 2024 Trego. All Rights Reserved.
                 </span>
               </section>
             </main>
             <main className='home-subscribe'>
               <main className='home-main5'>
                 <h1 className='home-heading18'>
-                  Subscribe to our newsletter
+                  Share your feedback{' '}
+                  <a
+                    href='https://www.facebook.com/profile.php?id=61564160848345'
+                    target='_blank'
+                    rel='noreferrer noopener'
+                    className='home-link2'
+                    style={{ color: ' #80ff44' }}
+                  >
+                    here
+                  </a>
                 </h1>
-                <div className='home-input-field'>
-                  <input
+                {/* <div className='home-input-field'> */}
+                {/* <input
                     type='email'
                     placeholder='Enter your email'
                     className='home-textinput input'
@@ -930,17 +914,17 @@ const Home = (props) => {
                       <span>Subscribe now</span>
                       <br></br>
                     </span>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div> */}
               </main>
               <h1 className='home-notice'>
-                By subscribing to our newsletter you agree
-                with our Terms and Conditions.
+                By sharing your feedback, you help us
+                improve your experience
               </h1>
             </main>
             <section className='home-copyright1'>
               <span className='home-text61'>
-                © 2022 latitude. All Rights Reserved.
+                © 2024 Trego. All Rights Reserved.
               </span>
             </section>
           </div>

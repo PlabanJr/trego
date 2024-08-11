@@ -4,6 +4,7 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+
 class CustomDocument extends Document {
   render() {
     return (
@@ -50,6 +51,10 @@ class CustomDocument extends Document {
             rel='stylesheet'
             href='https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css'
           ></link>
+          <script
+            src='https://app.wotnot.io/chat-widget/Sf2Zs357bPW2080347797848aBHPfia9.js'
+            defer
+          />
         </Head>
         <body>
           <Main></Main>

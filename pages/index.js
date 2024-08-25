@@ -35,7 +35,7 @@ const Home = (props) => {
               <main className='home-main'>
                 <header className='home-header'>
                   <h1 className='home-heading'>
-                    Get your car or bike service through{' '}
+                    Get your vehicle servicing done with{' '}
                     <span
                       style={{
                         fontWeight: 'bold',
@@ -64,11 +64,11 @@ const Home = (props) => {
                   </span>
                 </header>
                 <div className='home-buttons'>
-                  <div className='home-get-started button'>
+                  {/* <div className='home-get-started button'>
                     <span className='home-text'>
                       Book Service Now
                     </span>
-                  </div>
+                  </div> */}
                   {/* <div className='home-get-started1 button'>
                     <span className='home-text01'>
                       Explore Services
@@ -102,14 +102,14 @@ const Home = (props) => {
             <div className='home-image03'>
               <img
                 alt='image'
-                src='/SectionImages/heroimage-1500h.png'
+                src='/SectionImages/hero.png'
                 className='home-image04'
               />
             </div>
             <div className='home-image05'>
               <img
                 alt='image'
-                src='/SectionImages/heroimage-1500h.png'
+                src='/SectionImages/hero.png'
                 className='home-image06'
               />
             </div>
@@ -200,7 +200,7 @@ const Home = (props) => {
               <div className='home-image07'>
                 <img
                   alt='image'
-                  src='/SectionImages/group%201490-1200w.png'
+                  src='/SectionImages/auth.png'
                   className='home-image08'
                 />
               </div>
@@ -247,7 +247,7 @@ const Home = (props) => {
               <div className='home-image07'>
                 <img
                   alt='image'
-                  src='/SectionImages/group%201490-1200w.png'
+                  src='/SectionImages/benefits.png'
                   className='home-image08'
                 />
               </div>
@@ -308,7 +308,7 @@ const Home = (props) => {
               <div className='home-image07'>
                 <img
                   alt='image'
-                  src='/SectionImages/group%201490-1200w.png'
+                  src='/SectionImages/support.png'
                   className='home-image08'
                 />
               </div>
@@ -330,7 +330,7 @@ const Home = (props) => {
             <div className='home-image09'>
               <img
                 alt='image'
-                src='/SectionImages/group%201428-1200w.png'
+                src='/SectionImages/benefits.png'
                 className='home-image10'
               />
             </div>
@@ -366,18 +366,18 @@ const Home = (props) => {
                   </div>
                 </div>
               </div>
-              <div className='home-get-started2 button'>
+              {/* <div className='home-get-started2 button'>
                 <span className='home-text17'>
                   Book a slot
                 </span>
-              </div>
+              </div> */}
             </div>
           </section>
           <section className='home-note2'>
             <div className='home-image11'>
               <img
                 alt='image'
-                src='/SectionImages/group%201449-1200w.png'
+                src='/SectionImages/support.png'
                 className='home-image12'
               />
             </div>
@@ -491,7 +491,7 @@ const Home = (props) => {
                 Our partners brands
               </span>
               <h2 className='section-heading'>
-                <span>Discover our Service Centers</span>
+                <span>Discover Service Centers</span>
                 {/* <br></br>
                 <span></span> */}
               </h2>
@@ -506,21 +506,64 @@ const Home = (props) => {
           </header>
           <main className='home-cards'>
             <Card
+              icon='/Icons/Hyundai.png'
               rootClassName='card-root-class-name'
-              header={'M/S KEERTHI'}
-              description={`Residency Road Richmond Town Bengaluru, Karnataka`}
+              header={'Advaith Hyundai'}
+              description={`Shamarao Compound`}
             ></Card>
             <Card
-              icon='/Icons/group%201314-200h.png'
+              icon='/Icons/Hyundai.png'
+              rootClassName='card-root-class-name1'
+              header={'Trident Hyundai'}
+              description={`Kolandappa Garden, Anepalya`}
+            ></Card>
+            <Card
+              icon='/Icons/RE.png'
+              rootClassName='card-root-class-name2'
+              header={'Jagadamba Automobiles'}
+              description={`ITPL Main Road, WHITEFIELD`}
+            ></Card>
+            <Card
+              icon='/Icons/RE.png'
               rootClassName='card-root-class-name1'
               header={'HSR Enterprises'}
-              description={`Magadi Main Road, Rajajinagar, Bengaluru`}
+              description={`Dr Rajkumar Rd, Rajajinagar`}
             ></Card>
             <Card
-              icon='/Icons/group%201317-200h.png'
+              icon='/Icons/RE.png'
+              rootClassName='card-root-class-name'
+              header={'Company Store BTM'}
+              description={`23rd Cross, BTM 2nd Stage`}
+            ></Card>
+            <Card
+              icon='/Icons/Yamaha.png'
               rootClassName='card-root-class-name2'
-              header={'Advaith Hyundai'}
-              description={`Shama Rao Compound, Mission Road, Bangalore `}
+              header={'Bangalore Wheels'}
+              description={`Dr. Rajakumar Road, 4th Block, Rajajinagar`}
+            ></Card>
+            <Card
+              icon='/Icons/Yamaha.png'
+              rootClassName='card-root-class-name2'
+              header={'Laxmi International'}
+              description={`Plot No.5, Bannerghatta Road`}
+            ></Card>
+            <Card
+              icon='/Icons/Honda.png'
+              rootClassName='card-root-class-name2'
+              header={'Saphire Honda'}
+              description={`Billekahalli Dorasani Palya Banerghatta Main Road`}
+            ></Card>
+            <Card
+              icon='/Icons/Honda.png'
+              rootClassName='card-root-class-name2'
+              header={'Ananda Honda'}
+              description={` Bommanahalli, Begur Hobli`}
+            ></Card>
+            <Card
+              icon='/Icons/Honda.png'
+              rootClassName='card-root-class-name2'
+              header={'Planet Honda'}
+              description={`Tumkur Road Peenya`}
             ></Card>
           </main>
         </section>
@@ -767,7 +810,7 @@ const Home = (props) => {
             </div>
           </div>
         </section> */}
-        <section className='home-section12'>
+        {/* <section className='home-section12'>
           <header className='home-header10'>
             <header className='home-left4'>
               <span className='section-head'>Reviews</span>
@@ -814,7 +857,7 @@ const Home = (props) => {
           <div className='home-view-more'>
             <p className='home-text39'>View more</p>
           </div>
-        </section>
+        </section> */}
         {/* <section className='home-section14'>
           <header className='home-header11'>
             <span className='section-head'>
@@ -856,16 +899,16 @@ const Home = (props) => {
                 book with ease using Trego!
               </h2>
               <div className='home-buttons2'>
-                <div className='home-ios button'>
-                  {/* <img
+                {/* <div className='home-ios button'> */}
+                {/* <img
                     alt='image'
                     src='/Icons/apple-200w.png'
                     className='home-icon'
                   /> */}
-                  <span className='home-text40'>
+                {/* <span className='home-text40'>
                     Book Service Now
-                  </span>
-                </div>
+                  </span> */}
+                {/* </div> */}
                 {/* <div className='home-android button'>
                   <img
                     alt='image'
@@ -880,7 +923,7 @@ const Home = (props) => {
             </header>
             <img
               alt='image'
-              src='/SectionImages/group%201505-1200w.png'
+              src='/SectionImages/footer.png'
               className='home-image15'
             />
           </main>
@@ -1223,8 +1266,8 @@ Here's what the above is doing:
             line-height: 24px;
           }
           .home-image03 {
-            top: 150px;
-            right: 0px;
+            top: 360px;
+            right: 120px;
             width: 650px;
             height: 900px;
             margin: auto;
@@ -1444,6 +1487,10 @@ Here's what the above is doing:
             align-items: center;
             flex-direction: row;
             justify-content: center;
+            padding-top: 20px;
+          }
+          .home-image09 img {
+            width: 100%;
           }
           .home-image10 {
             object-fit: cover;
@@ -1505,6 +1552,10 @@ Here's what the above is doing:
             align-items: center;
             flex-direction: row;
             justify-content: center;
+            padding-top: 40px;
+          }
+          .home-image11 img {
+            width: 100%;
           }
           .home-image12 {
             object-fit: cover;
@@ -1620,6 +1671,7 @@ Here's what the above is doing:
             gap: var(--dl-space-space-threeunits);
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             max-width: 1200px;
             align-items: center;
             flex-direction: row;
@@ -2872,7 +2924,7 @@ Here's what the above is doing:
               flex-direction: column;
             }
             .home-image06 {
-              width: 600px;
+              display: none;
             }
             .home-text02 {
               text-align: center;
@@ -3041,9 +3093,9 @@ Here's what the above is doing:
             }
             .home-feature1 {
               width: 100%;
-              border-color: #5a5a5a;
+              // border-color: #5a5a5a;
               padding-bottom: var(--dl-space-space-unit);
-              border-bottom-width: 1px;
+              // border-bottom-width: 1px;
             }
             .home-text05 {
               font-size: 20px;

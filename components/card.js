@@ -38,7 +38,7 @@ const Card = (props) => {
           }
           .card-icon {
             display: flex;
-            padding: var(--dl-space-space-unit);
+            // padding: var(--dl-space-space-unit);
             align-items: center;
             aspect-ratio: 1;
             border-radius: 50%;
@@ -47,7 +47,7 @@ const Card = (props) => {
             background-color: #80ff44;
           }
           .card-icon1 {
-            height: 30px;
+            height: 100%;
             object-fit: cover;
           }
           .card-content {

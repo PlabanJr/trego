@@ -55,10 +55,42 @@ class CustomDocument extends Document {
             src='https://app.wotnot.io/chat-widget/Sf2Zs357bPW2080347797848aBHPfia9.js'
             defer
           />
+
+          <script
+            async
+            src='https://www.googletagmanager.com/gtag/js?id=G-RPYW2B5GSX'
+          ></script>
+          {/* <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config',
+            'G-RPYW2B5GSX');
+          </script> */}
+          <title>Trego</title>
+          <meta
+            name='description'
+            content='Get your vehicle servicing done'
+          />
+          <link
+            rel='icon'
+            href='/Branding/logo-white-final.png'
+          />
         </Head>
         <body>
           <Main></Main>
           <NextScript></NextScript>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if (typeof window !== 'undefined') {
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-RPYW2B5GSX');
+                }
+              `,
+            }}
+          />
           <div
             dangerouslySetInnerHTML={{
               __html:
